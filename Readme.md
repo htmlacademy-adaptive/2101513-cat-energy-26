@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Артур Ибрагимов](https://up.htmlacademy.ru/adaptive/26/user/2101513).
-* Наставник: `Неизвестно`.
+* Студент:  [Артур Ибрагимов](https://up.htmlacademy.ru/adaptive/26/user/2101513).
+* Наставник:  [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
