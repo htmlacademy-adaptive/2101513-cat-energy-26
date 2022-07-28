@@ -40,7 +40,7 @@
   <!-- Форма подбора программы -->
 
   <main class="main">
-    <form class="form" action="" method="post">
+    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__wrapper">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
@@ -48,6 +48,7 @@
         <!-- Данные питомца -->
 
         <div class="form__pet-date">
+          <h2 class="visually-hidden">Данные питомца.</h2>
           <div class="form__item-wrapper">
             <label class="form__item-title" for="name">Имя:*</label>
             <input class="form__item-input" type="text" id="name" placeholder="Барсик" required>
@@ -65,6 +66,7 @@
         <!-- Программа -->
 
         <div class="form__program">
+          <h2 class="visually-hidden">Необходимая программа.</h2>
           <div class="form__item-wrapper">
             <input class="form__program-input" type="radio" name="program" id="slim">
             <label class="form__item-title" for="slim">Похудение</label>
@@ -156,6 +158,7 @@
         <a class="main-footer__logo logo">
           <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи.">
         </a>
+        <h2 class="visually-hidden">Контакты.</h2>
         <ul class="main-footer__contacts contacts-list">
           <li class="contacts-list__item">
             <a class="contacts-list__link" href="https://vk.com/htmlacademy">

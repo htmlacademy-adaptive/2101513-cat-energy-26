@@ -12,7 +12,7 @@
 
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo-icon">
+      <a class="main-header__logo-icon" href="index.html">
         <img src="./img/main-header/__logo-icon.svg" alt="Логотип сайта Кэт-Энерджи.">
       </a>
       <a class="main-header__logo logo">
@@ -24,7 +24,7 @@
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -36,17 +36,18 @@
       </button>
     </div>
   </header>
-  <main class="main">
 
     <!-- Каталог продукции -->
 
+  <main class="main">
     <section class="catalog">
       <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог продукции</h1>
+        <h2 class="visually-hidden">Основные товары.</h2>
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-chicken-500.png" alt="Еда для набора массы со вкусом курицы.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy PRO 500 г</b>
+            <h3 class="card__title">Cat Energy PRO 500 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -67,7 +68,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-chicken-1000.png" alt="Еда для набора массы со вкусом курицы.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy PRO 1000 г</b>
+            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -88,7 +89,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-fish-500.png" alt="Еда для набора массы со вкусом рыбы.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy PRO 500 г</b>
+            <h3 class="card__title">Cat Energy PRO 500 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -109,7 +110,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-fish-1000.png" alt="Еда для набора массы со вкусом рыбы.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy PRO 1000 г</b>
+            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -130,7 +131,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-buckwheat-500.png" alt="Еда для похудения со вкусом гречки.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy Slim 500 г</b>
+            <h3 class="card__title">Cat Energy Slim 500 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -151,7 +152,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-buckwheat-1000.png" alt="Еда для похудения со вкусом гречки.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy Slim 1000 г</b>
+            <h3 class="card__title">Cat Energy Slim 1000 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -172,7 +173,7 @@
         <article class="catalog__card card">
           <img class="card__image" src="./img/card/card-rice-500.png" alt="Еда для похудения со вкусом риса.">
           <div class="card__text-wrapper">
-            <b class="card__title">Cat Energy Slim 500 г</b>
+            <h3 class="card__title">Cat Energy Slim 500 г</h3>
             <dl class="card__info">
               <div class="card__info-item">
                 <dt class="card__info-term">Масса</dt>
@@ -191,7 +192,7 @@
           <button class="card__button button" type="button">Заказать</button>
         </article>
         <section class="catalog__additional-card card">
-          <b class="card__title">Показать еще 100500 товаров</b>
+          <h3 class="card__title">Показать еще 100500 товаров</h3>
           <p class="card__subtitle">На самом деле вкусов гораздо больше!</p>
           <button class="card__button card__button--additional button" type="button">Показать все</button>
         </section>
@@ -204,7 +205,7 @@
       <div class="optional-catalog__wrapper">
         <h2 class="optional-catalog__title">Дополнительные товары</h2>
         <article class="optional-catalog__card optional-card">
-          <b class="optional-card__title">Сахарозаменитель</b>
+          <h3 class="optional-card__title">Сахарозаменитель</h3>
           <dl class="optional-card__info">
             <dt class="optional-card__term">1 упаковка (100 г)</dt>
             <dd class="optional-card__def">200 Р.</dd>
@@ -212,7 +213,7 @@
           <button class="optional-card__button button" type="button">Заказать</button>
         </article>
         <article class="optional-catalog__card optional-card">
-          <b class="optional-card__title">Ритьевая вода</b>
+          <h3 class="optional-card__title">Ритьевая вода</h3>
           <dl class="optional-card__info">
             <dt class="optional-card__term">5 литров</dt>
             <dd class="optional-card__def">50 Р.</dd>
@@ -220,7 +221,7 @@
           <button class="optional-card__button button" type="button">Заказать</button>
         </article>
         <article class="optional-catalog__card optional-card">
-          <b class="optional-card__title">Молоко</b>
+          <h3 class="optional-card__title">Молоко</h3>
           <dl class="optional-card__info">
             <dt class="optional-card__term">1 литр</dt>
             <dd class="optional-card__def">100 Р.</dd>
@@ -229,7 +230,7 @@
         </article>
       </div>
       <article class="optional-catalog__card optional-card">
-        <b class="optional-card__title">Витамины</b>
+        <h3 class="optional-card__title">Витамины</h3>
         <dl class="optional-card__info">
           <dt class="optional-card__term">1 упаковка (30 г)</dt>
           <dd class="optional-card__def">300 Р.</dd>
@@ -261,6 +262,7 @@
         </div>
       </div>
     </aside>
+  </main>
 
     <!-- Футер -->
 
@@ -269,6 +271,7 @@
         <a class="main-footer__logo logo">
           <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи.">
         </a>
+        <h2 class="visually-hidden">Контакты.</h2>
         <ul class="main-footer__contacts contacts-list">
           <li class="contacts-list__item">
             <a class="contacts-list__link" href="https://vk.com/htmlacademy">
@@ -294,7 +297,6 @@
         </address>
       </div>
     </footer>
-  </main>
 </body>
 
 </html>
