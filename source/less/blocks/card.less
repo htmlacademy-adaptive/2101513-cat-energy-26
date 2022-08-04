@@ -1,0 +1,47 @@
+.card {
+  display: grid;
+  grid-template-columns: minmax(141px, auto) minmax(139px, auto);
+  grid-template-rows: auto min-content;
+
+  row-gap: 22px;
+}
+
+.card__image {
+  align-self: center;
+  justify-self: center;
+}
+
+.card__button {
+  grid-column: span 2;
+}
+
+.card__title {
+  .subtitle;
+  color: @card-title-text-color;
+  font-size: 16px;
+
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.card__info {
+  margin: 0;
+}
+
+.card__info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__info-term {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__info-def {
+  font-size: 12px;
+  line-height: 16px;
+
+  margin-left: 0;
+}
+
