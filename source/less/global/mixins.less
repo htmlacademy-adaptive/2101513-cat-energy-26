@@ -1,11 +1,11 @@
 // Mixins
 
-.basic-text-style () {
-  font-family: "Arial", sans-serif;
+.basic-text-style() {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 18px;
 
   color: @basic-text-color;
 }
@@ -19,10 +19,43 @@
   color: @color;
 }
 
-  // .secondary-text-style(
-  // @oswald;
-  // normal;
-  // 400;
-  // 14px;
-  // 14px;
-  // @default-text-color);
+.heading() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: @secondary-text-color;
+}
+
+.sub-heading() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  color: @secondary-text-color;
+}
+
+.title() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+
+  color: @secondary-text-color;
+}
+
+.button() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: @default-text-color;
+}
+

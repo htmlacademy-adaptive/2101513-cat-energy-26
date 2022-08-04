@@ -1,0 +1,40 @@
+.product-about__wrapper {
+  max-width: 280px;
+
+  margin: 0 auto;
+  margin-bottom: 49px;
+}
+
+.product-about__title {
+  .sub-heading;
+}
+
+.product-about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.product-about__info {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 80px;
+
+  position: relative;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background: @hero-bg-color url(../../img/product-about/leaf.svg) no-repeat;
+  }
+}
