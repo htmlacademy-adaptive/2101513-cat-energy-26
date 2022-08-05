@@ -6,14 +6,23 @@
     14px;
     14px;
     @default-text-color);
-
   text-align: center;
 
   padding-top: 27px;
 
   position: relative;
 
-  background: url("../../img/promo/cat.jpg") no-repeat;
+  background-image: linear-gradient(@hero-bg-color, @hero-bg-color 302px, @basic-bg-color 302px, @basic-bg-color);
+
+  @media (min-width: @tablet) {
+    min-height: 100vh;
+
+    padding-top: 0;
+
+    background-image: none;
+    background-color: @basic-bg-color;
+  }
+
 
   &::before {
     content: "";
@@ -26,8 +35,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 
-    background-color: @hero-bg-color;
+    background: url("../../img/promo/cat.jpg") no-repeat center;
   }
 
   &::after {
@@ -43,17 +53,40 @@
     left: 50%;
     transform: translateX(-50%);
 
-    background: url("../../img/promo/promo-image.jpg") no-repeat;
+    background: url("../../img/promo/promo-image.jpg") no-repeat center top;
+
+    @media (min-width: @tablet) {
+      width: 709px;
+      height: 609px;
+
+      top: 265px;
+
+      background: url("../../img/promo/promo-image--tablet.png") no-repeat center top;
+    }
   }
 }
 
 .promo__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
 
   position: relative;
   z-index: 1;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    padding-left: 90px;
+    padding-top: 68px;
+  }
+}
+
+.promo__text-wrapper {
+  @media (min-width: @tablet) {
+    max-width: 528px;
+
+    text-align: left;
+  }
 }
 
 .promo__title {
@@ -63,10 +96,22 @@
 
   margin-top: 0;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet) {
+    .extra-heading;
+
+    margin-bottom: 41px;
+  }
 }
 
 .promo__subtitle {
   margin: 0;
+
+  @media (min-width: @tablet) {
+    .subtitle;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
 }
 
 .promo__button {
@@ -77,6 +122,21 @@
 
   display: block;
 
-  margin-top: 309px;
-  margin-bottom: 20px;
+  margin: 309px auto 20px;
+  padding: 9px 26px;
+
+  @media (min-width: @extra-mobile) {
+    margin-top: 345px;
+  }
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    margin-top: 49px;
+    padding: 14px 26px;
+
+    text-align: center;
+
+    .button;
+    font-size: 20px;
+  }
 }
