@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,16 +14,21 @@
 
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo-icon">
-        <img src="./img/main-header/__logo-icon.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
-      </a>
-      <a class="main-header__logo">
-        <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи." width="101" height="18">
-      </a>
+      <div class="main-header__container">
+        <a class="main-header__logo-icon">
+          <img src="./img/main-header/__logo-icon.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
+        </a>
+        <a class="main-header__logo">
+          <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи." width="101" height="18">
+        </a>
+        <button class="main-header__nav-toggle" type="button">
+          <span class="visually-hidden">Открыть навигацию.</span>
+        </button>
+      </div>
       <nav class="main-nav main-nav--close">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link">Главная</a>
+            <a class="main-nav__link main-nav__link--current">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -32,9 +38,6 @@
           </li>
         </ul>
       </nav>
-      <button class="main-header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть навигацию.</span>
-      </button>
     </div>
   </header>
 

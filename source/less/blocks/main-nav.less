@@ -1,5 +1,9 @@
 .main-nav--close {
-  display: none;
+  // display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -10,10 +14,28 @@
 
   position: absolute;
   left: 0;
-  top: 68px;
+  top: 66px;
 
   list-style-type: none;
   text-align: center;
+  text-transform: uppercase;
+
+  z-index: 2;
+
+  @media (min-width: @tablet) {
+    position: static;
+
+    margin-right: 30px;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+
+    .title;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .main-nav__link {
@@ -25,4 +47,16 @@
   background-color: @basic-bg-color;
   text-decoration: none;
   color: inherit;
+
+  @media (min-width: @tablet) {
+    border: none;
+  }
+}
+
+.main-nav__link--current {
+  @media (min-width: @tablet) {
+    border-bottom: 2px solid @hero-bg-color;
+
+    padding: 22px 0 24px;
+  }
 }
