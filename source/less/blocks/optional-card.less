@@ -3,6 +3,16 @@
   flex-direction: column;
 
   padding-top: 13px;
+
+  @media (min-width: @tablet) {
+    padding: 27px 38px;
+
+    display: grid;
+    align-items: flex-end;
+    gap: 20px 0;
+
+    grid-template-columns: repeat(2, minmax(300px, auto));
+  }
 }
 
 .optional-card__title {
@@ -13,6 +23,15 @@
 
   margin-top: 0;
   margin-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    .subtitle;
+    font-size: 20px;
+    color:@card-title-text-color;
+    text-transform: uppercase;
+
+    margin-bottom: 0;
+  }
 }
 
 .optional-card__info {
@@ -21,14 +40,34 @@
 
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet) {
+    .basic-text-style--tablet;
+    line-height: 20px;
+    color: @basic-text-color;
+
+    margin-bottom: 0;
+
+    justify-content: flex-end;
+  }
 }
 
 .optional-card__term {
   line-height: 14px;
+
+  margin-right: 50px;
 }
 
 .optional-card__def {
   line-height: 14px;
 
   margin-left: 0;
+}
+
+.optional-card__button {
+  padding: 7px 20px;
+
+  @media (min-width: @tablet) {
+    grid-column: 1 / -1;
+  }
 }

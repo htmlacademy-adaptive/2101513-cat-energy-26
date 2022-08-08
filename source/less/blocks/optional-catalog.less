@@ -1,8 +1,12 @@
 .optional-catalog__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   padding: 25px 0 35px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
 }
 
 .optional-catalog__title {
@@ -11,12 +15,27 @@
 
   margin-top: 0;
   margin-bottom: 36px;
+
+  @media (min-width: @tablet) {
+    .heading;
+
+    margin-bottom: 80px;
+  }
 }
 
 .optional-catalog__card {
   margin-bottom: 19px;
 
   border-top: 1px solid @optional-border-color;
+
+  @media (min-width: @tablet) {
+    border-top: none;
+    border: 1px solid @optional-border-color;
+    border-bottom: none;
+
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 .optional-catalog__card--additional-border-bottom {
