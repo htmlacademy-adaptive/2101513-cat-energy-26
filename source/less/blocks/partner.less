@@ -1,8 +1,13 @@
 .partner__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   padding: 26px 0 26px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    padding: 57px 40px 57px;
+  }
 }
 
 .partner__address {
@@ -15,10 +20,39 @@
   .subtitle;
   font-size: 16px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    min-width: 171px;
+  }
+}
+
+.partner__subtitle {
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: end;
+  }
+}
+
+.partner__city {
+  @media (min-width: @tablet) {
+    display: inline-block;
+
+    margin-top: 20px;
+  }
 }
 
 .partner__location-picture {
   display: block;
+
+  width: 100%;
+  object-fit: cover;
 }
 
 .partner--background-secondary {
