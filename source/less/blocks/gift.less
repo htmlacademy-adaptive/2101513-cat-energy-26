@@ -1,12 +1,17 @@
 .gift {
-  min-width: 279px;
-  min-height: 289px;
+  min-width: 280px;
+  height: 290px;
 
   position: relative;
 
   margin-top: 35px;
+  padding: 30px 30px 43px;
 
-  background: @hero-bg-color url("../../img/gift/cat-background.jpg") no-repeat center center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background-color: @hero-bg-color;
 
   &::before {
     content: "";
@@ -20,7 +25,21 @@
     top: 0;
     left: 0;
 
-    background-color: @hero-bg-color;
+    background: url("../../img/gift/cat-background.jpg") no-repeat center center;
+
+    z-index: -1;
+
+    @media (min-width: @tablet) {
+      background-size: cover;
+      background-position: 0 60%;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    height: 200px;
+
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -29,14 +48,40 @@
   line-height: 20px;
   color: @default-text-color;
 
-  padding-top: 186px;
-
   text-align: center;
 
-  position: relative;
-  z-index: 1;
+  @media (min-width: @tablet) {
+    text-align: start;
+
+    margin-right: 94px;
+    padding-left: 437px;
+  }
 }
 
 .gift__title {
   margin: 0;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    top: -120px;
+    transform: translate(-50%);
+
+    width: 80px;
+    height: 80px;
+
+    background: url("../../img/gift/icon_gift.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      top: 50%;
+      left: -350px;
+      transform: translate(0, -50%);
+    }
+  }
 }
