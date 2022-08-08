@@ -3,18 +3,29 @@
 }
 
 .main-footer__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   padding: 39px 0 22px;
 
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    padding: 56px 0 56px;
+  }
 }
 
 .main-footer__logo {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .main-footer__contacts {
@@ -28,6 +39,15 @@
   list-style-type: none;
 
   border-top: 1px solid @footer-border-color;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 0;
+
+    max-width: 416px;
+
+    border: none;
+  }
 }
 
 .main-footer__address-wrapper {
@@ -40,6 +60,17 @@
 
   border-top: 1px solid @footer-border-color;
   padding-top: 22px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+
+    max-width: 164px;
+
+    justify-content: end;
+    gap: 22px;
+
+    border: none;
+  }
 }
 
 .main-footer__copyright {
