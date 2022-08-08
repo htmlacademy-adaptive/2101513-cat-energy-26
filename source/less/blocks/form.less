@@ -5,11 +5,22 @@
   box-sizing: border-box;
 }
 
-.form__header {
-  max-width: 280px;
+.form__wrapper {
+  @media (min-width: @tablet) {
+    padding: 0 40px 0;
+  }
+}
 
-  margin: 0 auto;
+.form__header {
+  min-width: 280px;
+
+  margin: 0 20px;
   padding-top: 27px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    padding: 30px 40px 0;
+  }
 }
 
 .form__title {
@@ -17,6 +28,12 @@
 
   margin-top: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet) {
+    .extra-heading;
+
+    margin-bottom: 54px;
+  }
 }
 
 .form__subtitle {
@@ -26,6 +43,13 @@
 
   margin-top: 0;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+    color: @secondary-text-color;
+
+    margin-bottom: 66px;
+  }
 }
 
 // Данные питомца
@@ -35,13 +59,21 @@
   font-size: 16px;
   line-height: 18px;
   color: @basic-text-color;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+  }
 }
 
 .form__pet-date-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 24px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
 }
 
 .form__pet-item-wrapper {
@@ -49,6 +81,10 @@
   align-items: center;
 
   margin-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__pet-title {
@@ -73,13 +109,27 @@
   .subtitle;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+
+    border-top: none;
+  }
 }
 
 .form__program-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 71px;
+    padding: 25px 27px;
+
+    border: 1px solid #E7E7E7;
+  }
 }
 
 .form__program-item-wrapper {
@@ -103,13 +153,23 @@
   .subtitle;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+
+    border-top: none;
+  }
 }
 
 .form__personal-date-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
 }
 
 .form__personal-title {
@@ -119,6 +179,13 @@
 
   .title;
   line-height: 26px;
+
+  @media (min-width: @tablet) {
+    .heading;
+
+    margin-bottom: 76px;
+    padding-top: 0;
+  }
 }
 
 .form__personal-item-wrapper {
@@ -126,6 +193,10 @@
   align-items: center;
 
   margin-bottom: 14px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__personal-item-title {
@@ -144,9 +215,13 @@
 // Комментарий
 
 .form__comment {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
 }
 
 .form__comment-title {
@@ -155,16 +230,47 @@
 
   margin-top: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet) {
+    margin-top: 65px;
+    margin-bottom: 76px;
+
+    .heading;
+  }
+}
+
+.form__comment-area {
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 65px;
+  }
 }
 
 
 // Дополнительно
 
 .form__additional {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 72px;
+  }
+}
+
+.form__additional-layout {
+  @media (min-width: @tablet) {
+    display: grid;
+    gap: 37px 124px;
+
+    grid-template-columns: repeat(2, minmax(285px, auto));
+  }
 }
 
 .form__additional-title {
@@ -173,7 +279,12 @@
 
   margin-top: 0;
   margin-bottom: 37px;
-  padding-top: 22px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 57px;
+
+    .heading;
+  }
 }
 
 .form__add-item-wrapper {
@@ -187,20 +298,44 @@
   text-transform: uppercase;
 
   padding-left: 46px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+    color: @secondary-text-color;
+  }
 }
 
 // Футер
 
 .form__footer {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+
+    display: flex;
+  }
 }
 
 .form__button {
   width: 100%;
 
   margin-bottom: 21px;
+
+  padding: 7px 25px;
+
+  @media (min-width: @tablet) {
+    margin-right: 61px;
+    padding: 13px 25px;
+
+    max-width: 282px;
+
+    justify-self: flex-start;
+
+    font-size: 20px;
+  }
 }
 
 .form__legend {

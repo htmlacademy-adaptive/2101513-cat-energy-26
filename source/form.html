@@ -43,7 +43,7 @@
   <!-- Форма подбора программы -->
 
   <main class="main">
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__header">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
@@ -92,7 +92,7 @@
 
         <div class="form__personal-date">
           <div class="form__personal-date-wrapper">
-            <h2 class="form__personal-title">Контактные данные<br>(владельца кота)</h2>
+            <h2 class="form__personal-title">Контактные данные<br class="form__personal-break">(владельца кота)</h2>
             <div class="form__personal-item-wrapper">
               <label class="form__personal-item-title" for="email">E-mail:*</label>
               <input class="form__personal-input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -114,21 +114,23 @@
 
       <div class="form__additional">
         <h2 class="form__additional-title">Дополнительно</h2>
-        <div class="form__add-item-wrapper">
-          <input class="form__add-input visually-hidden" type="checkbox" name="sweetener" id="sweetener">
-          <label class="form__add-item-title" for="sweetener">Сахарозаменитель</label>
-        </div>
-        <div class="form__add-item-wrapper">
-          <input class="form__add-input visually-hidden" type="checkbox" name="water" id="water">
-          <label class="form__add-item-title" for="water">Питьевая вода</label>
-        </div>
-        <div class="form__add-item-wrapper">
-          <input class="form__add-input visually-hidden" type="checkbox" name="milk" id="milk">
-          <label class="form__add-item-title" for="milk">Молоко</label>
-        </div>
-        <div class="form__add-item-wrapper">
-          <input class="form__add-input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-          <label class="form__add-item-title" for="vitamins">Витамины</label>
+        <div class="form__additional-layout">
+          <div class="form__add-item-wrapper">
+            <input class="form__add-input visually-hidden" type="checkbox" name="sweetener" id="sweetener">
+            <label class="form__add-item-title" for="sweetener">Сахарозаменитель</label>
+          </div>
+          <div class="form__add-item-wrapper">
+            <input class="form__add-input visually-hidden" type="checkbox" name="water" id="water">
+            <label class="form__add-item-title" for="water">Питьевая вода</label>
+          </div>
+          <div class="form__add-item-wrapper">
+            <input class="form__add-input visually-hidden" type="checkbox" name="milk" id="milk">
+            <label class="form__add-item-title" for="milk">Молоко</label>
+          </div>
+          <div class="form__add-item-wrapper">
+            <input class="form__add-input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+            <label class="form__add-item-title" for="vitamins">Витамины</label>
+          </div>
         </div>
       </div>
 
