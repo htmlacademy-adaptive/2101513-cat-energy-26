@@ -1,27 +1,133 @@
 .feature {
-  box-sizing: border-box;
-
-  margin-bottom: 20px;
-
+  @media (min-width: @tablet) {
+    position: relative;
+  }
   background-color: @secondary-bg-color;
 }
 
 .feature__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .feature__text-wrapper {
   padding: 39px 20px 23px;
+
+  @media (min-width: @tablet) {
+    max-width: 339px;
+
+    padding: 77px 0 53px 50px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+
+    padding: 50px 50px;
+  }
+}
+
+.feature__layout {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  display: grid;
+  gap: 20px 0;
+
+  @media (min-width: @tablet) {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+
+    gap: 30px 0;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+    margin: 0 110px;
+    margin-bottom: 71px;
+
+    gap: 80px 80px;
+
+    grid-template-columns: repeat(2, minmax(570px, auto));
+  }
 }
 
 .feature__title {
   .title;
+  text-transform: uppercase;
 
   margin-top: 0;
   margin-bottom: 29px;
+  padding-left: 69px;
+
+  position: relative;
+
+  @media (min-width: @tablet) {
+    padding-left: 0;
+
+    position: static;
+
+    .heading;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 73px;
+    padding-left: 160px;
+
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 53px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: url("../../img/features/cat_icon.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      width: 200px;
+      height: 211px;
+
+      background: url("../../img/features/cat_icon--tablet.svg") no-repeat;
+
+      left: 460px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 100px;
+      height: 100px;
+
+      background: url("../../img/features/cat_icon--desktop.svg") no-repeat;
+
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.feature__subtitle {
+  @media (min-width: @tablet) {
+    .basic-text-style--tablet;
+  }
 }
 
 .feature__link {
@@ -39,4 +145,14 @@
 
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    .secondary-text-style(
+      @oswald;
+      normal;
+      400;
+      20px;
+      30px;
+      @secondary-text-color);
+  }
 }

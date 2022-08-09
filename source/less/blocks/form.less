@@ -3,13 +3,33 @@
   border-top: 1px solid @form-border-color;
 
   box-sizing: border-box;
+
+  @media (min-width: @tablet) {
+    border-top: none;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: @tablet) {
+    padding: 0 40px 0;
+  }
 }
 
 .form__header {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   padding-top: 27px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    padding: 30px 40px 0;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    padding: 0;
+  }
 }
 
 .form__title {
@@ -17,6 +37,16 @@
 
   margin-top: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet) {
+    .extra-heading;
+
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 56px;
+  }
 }
 
 .form__subtitle {
@@ -26,6 +56,13 @@
 
   margin-top: 0;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+    color: @secondary-text-color;
+
+    margin-bottom: 66px;
+  }
 }
 
 // Данные питомца
@@ -35,13 +72,30 @@
   font-size: 16px;
   line-height: 18px;
   color: @basic-text-color;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+  }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+  }
 }
 
 .form__pet-date-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 24px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-right: 80px;
+  }
 }
 
 .form__pet-item-wrapper {
@@ -49,6 +103,10 @@
   align-items: center;
 
   margin-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__pet-title {
@@ -73,13 +131,44 @@
   .subtitle;
   font-size: 16px;
   line-height: 18px;
+
+
+  max-width: 1000px;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+
+    border-top: none;
+  }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+
+    padding-top: 0;
+    margin-right: 0;
+
+    max-width: none;
+  }
 }
 
 .form__program-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 71px;
+    padding: 25px 27px;
+
+    border: 1px solid #e7e7e7;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .form__program-item-wrapper {
@@ -88,15 +177,28 @@
   margin-bottom: 13px;
 }
 
-.form__program-input {
-  display: none;
-}
-
 .form__program-title {
   padding-left: 45px;
 
   text-transform: uppercase;
   color: @input-form-text-color;
+}
+
+.form__container {
+
+  max-width: 1000px;
+  margin-right: auto;
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 110px;
+    margin-bottom: 70px;
+    margin-right: 0;
+
+    max-width: none;
+  }
 }
 
 // Персональные данные
@@ -107,13 +209,47 @@
   .subtitle;
   font-size: 16px;
   line-height: 18px;
+
+  max-width: 1000px;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+
+    border-top: none;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 0;
+    max-width: none;
+  }
 }
 
 .form__personal-date-wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__personal-layout {
+  @media (min-width: @tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+
+    gap: 78px;
+  }
 }
 
 .form__personal-title {
@@ -123,6 +259,13 @@
 
   .title;
   line-height: 26px;
+
+  @media (min-width: @tablet) {
+    .heading;
+
+    margin-bottom: 76px;
+    padding-top: 0;
+  }
 }
 
 .form__personal-item-wrapper {
@@ -130,6 +273,16 @@
   align-items: center;
 
   margin-bottom: 14px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+
+    margin-bottom: 0;
+  }
 }
 
 .form__personal-item-title {
@@ -145,12 +298,45 @@
   padding: 13px 46px 15px 16px;
 }
 
+.form__personal-break {
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
 // Комментарий
 
 .form__comment {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__comment-layout {
+  margin-right: auto;
+
+  max-width: 940px;
+
+  @media (min-width: @tablet) {
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 0;
+    padding-right: 0;
+
+    max-width: none;
+  }
 }
 
 .form__comment-title {
@@ -159,16 +345,55 @@
 
   margin-top: 0;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 76px;
+
+    .heading;
+  }
+}
+
+.form__comment-area {
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 65px;
+  }
 }
 
 
 // Дополнительно
 
 .form__additional {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    margin-bottom: 61px;
+  }
+}
+
+.form__additional-layout {
+  @media (min-width: @tablet) {
+    display: grid;
+    gap: 37px 124px;
+
+    grid-template-columns: repeat(2, minmax(285px, auto));
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .form__additional-title {
@@ -177,15 +402,16 @@
 
   margin-top: 0;
   margin-bottom: 37px;
-  padding-top: 22px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 57px;
+
+    .heading;
+  }
 }
 
 .form__add-item-wrapper {
   margin-bottom: 12px;
-}
-
-.form__add-input {
-  display: none;
 }
 
 .form__add-item-title {
@@ -195,24 +421,68 @@
   text-transform: uppercase;
 
   padding-left: 46px;
+
+  @media (min-width: @tablet) {
+    .form-text-style;
+    color: @secondary-text-color;
+  }
 }
 
 // Футер
 
 .form__footer {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__footer-layout {
+  @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 82px;
+  }
 }
 
 .form__button {
   width: 100%;
 
   margin-bottom: 21px;
+
+  padding: 7px 25px;
+
+  @media (min-width: @tablet) {
+    margin-right: 61px;
+    padding: 13px 25px;
+
+    max-width: 282px;
+
+    justify-self: flex-start;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 81px;
+    margin-bottom: 0;
+
+    min-width: 568px;
+  }
 }
 
 .form__legend {
   line-height: 16px;
   color: @secondary-text-color;
   text-align: center;
+
+  margin: 0;
 }

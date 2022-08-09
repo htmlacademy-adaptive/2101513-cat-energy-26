@@ -11,13 +11,23 @@
 }
 
 .main-header__wrapper {
-  max-width: 280px;
+  min-width: 280px;
 
-  margin: 0 auto;
+  margin: 0 20px;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
 }
 
 .main-header__logo-icon {
@@ -25,52 +35,47 @@
   padding: 12px 0 16px;
 
   flex: 1;
+
+  @media (min-width: @tablet) {
+    margin-left: 30px;
+    margin-right: 94px;
+  }
+}
+
+.main-header__container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    width: auto;
+  }
 }
 
 .main-header__logo {
   margin-right: 65px;
-  padding: 24px 0 24px;
-  flex: 1;
-}
+  padding: 23px 0 23px;
 
-.main-nav--close {
-  display: none;
-}
-
-.main-nav__list {
-  width: 100%;
-
-  padding: 0;
-  margin: 0;
-
-  position: absolute;
-  left: 0;
-  top: 68px;
-
-  list-style-type: none;
-  text-align: center;
-}
-
-.main-nav__link {
-  display: block;
-
-  padding: 22px 0 24px;
-
-  border-top: 1px solid @basic-border-color;
-  background-color: @basic-bg-color;
-  text-decoration: none;
-  color: inherit;
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
 
 .main-header__nav-toggle {
   min-width: 24px;
   min-height: 18px;
 
-  padding: 24px 0 24px;
+  padding: 33px 0 33px;
 
   background: @basic-bg-color url("../../img/main-header/__toggle.svg") no-repeat center center;
   border: none;
   cursor: pointer;
 
   flex: 1;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
