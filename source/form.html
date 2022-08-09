@@ -27,13 +27,13 @@
       <nav class="main-nav main-nav--close">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
+            <a class="main-nav__link main-nav__link--dark" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--dark" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--dark main-nav__link--current">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -49,6 +49,8 @@
         <p class="form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </div>
         <!-- Данные питомца -->
+
+      <div class="form__container">
 
         <div class="form__pet-date">
           <div class="form__pet-date-wrapper">
@@ -71,6 +73,7 @@
         <!-- Программа -->
 
         <div class="form__program">
+
           <div class="form__program-wrapper">
             <h2 class="visually-hidden">Необходимая программа.</h2>
             <div class="form__program-item-wrapper">
@@ -86,13 +89,19 @@
               <label class="form__program-title" for="help">Не знаю (Нужен ваш совет)</label>
             </div>
           </div>
+
         </div>
 
+      </div>
         <!-- Персональные данные -->
 
         <div class="form__personal-date">
+
           <div class="form__personal-date-wrapper">
-            <h2 class="form__personal-title">Контактные данные<br class="form__personal-break">(владельца кота)</h2>
+            <h2 class="form__personal-title">Контактные данные<br class="form__personal-break"> (владельца кота)</h2>
+
+          <div class="form__personal-layout">
+
             <div class="form__personal-item-wrapper">
               <label class="form__personal-item-title" for="email">E-mail:*</label>
               <input class="form__personal-input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -101,41 +110,53 @@
               <label class="form__personal-item-title" for="phone">Телефон:*</label>
               <input class="form__personal-input" type="tel" name="phone-number" id="phone" placeholder="8 (960) 900-60-90" required>
             </div>
+
+          </div>
+
           </div>
         </div>
 
         <!-- Комментарии -->
       <div class="form__comment">
-        <h2 class="form__comment-title">Комментарий</h2>
-        <textarea class="form__comment-area" name="comment" cols="31" rows="10">Расскажите обо всех повадках кота</textarea>
+        <div class="form__comment-layout">
+          <h2 class="form__comment-title">Комментарий</h2>
+          <textarea class="form__comment-area" name="comment" cols="31" rows="10">Расскажите обо всех повадках кота</textarea>
+        </div>
       </div>
 
       <!-- Дополнительно -->
 
       <div class="form__additional">
         <h2 class="form__additional-title">Дополнительно</h2>
-        <div class="form__additional-layout">
-          <div class="form__add-item-wrapper">
-            <input class="form__add-input visually-hidden" type="checkbox" name="sweetener" id="sweetener">
-            <label class="form__add-item-title" for="sweetener">Сахарозаменитель</label>
+
+          <div class="form__additional-layout">
+
+            <div class="form__add-item-wrapper">
+              <input class="form__add-input visually-hidden" type="checkbox" name="sweetener" id="sweetener">
+              <label class="form__add-item-title" for="sweetener">Сахарозаменитель</label>
+            </div>
+
+            <div class="form__add-item-wrapper">
+              <input class="form__add-input visually-hidden" type="checkbox" name="water" id="water">
+              <label class="form__add-item-title" for="water">Питьевая вода</label>
+            </div>
+
+            <div class="form__add-item-wrapper">
+              <input class="form__add-input visually-hidden" type="checkbox" name="milk" id="milk">
+              <label class="form__add-item-title" for="milk">Молоко</label>
+            </div>
+
+            <div class="form__add-item-wrapper">
+              <input class="form__add-input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+              <label class="form__add-item-title" for="vitamins">Витамины</label>
+            </div>
+
           </div>
-          <div class="form__add-item-wrapper">
-            <input class="form__add-input visually-hidden" type="checkbox" name="water" id="water">
-            <label class="form__add-item-title" for="water">Питьевая вода</label>
-          </div>
-          <div class="form__add-item-wrapper">
-            <input class="form__add-input visually-hidden" type="checkbox" name="milk" id="milk">
-            <label class="form__add-item-title" for="milk">Молоко</label>
-          </div>
-          <div class="form__add-item-wrapper">
-            <input class="form__add-input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-            <label class="form__add-item-title" for="vitamins">Витамины</label>
-          </div>
-        </div>
+
       </div>
 
       <!-- Кнопка -->
-      <div class="form__footer">
+      <div class="form__footer form__footer-layout">
         <button class="form__button button" type="submit">Отправить заявку</button>
         <p class="form__legend"><sup>*</sup> — Обязательные поля</p>
       </div>

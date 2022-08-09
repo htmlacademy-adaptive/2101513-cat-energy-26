@@ -25,6 +25,11 @@
     margin: 0 30px;
     padding: 30px 40px 0;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    padding: 0;
+  }
 }
 
 .form__title {
@@ -37,6 +42,10 @@
     .extra-heading;
 
     margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 56px;
   }
 }
 
@@ -67,6 +76,10 @@
   @media (min-width: @tablet) {
     .form-text-style;
   }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+  }
 }
 
 .form__pet-date-wrapper {
@@ -77,6 +90,11 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-right: 80px;
   }
 }
 
@@ -114,10 +132,23 @@
   font-size: 16px;
   line-height: 18px;
 
+
+  max-width: 1000px;
+  margin-right: auto;
+
   @media (min-width: @tablet) {
     .form-text-style;
 
     border-top: none;
+  }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+
+    padding-top: 0;
+    margin-right: 0;
+
+    max-width: none;
   }
 }
 
@@ -134,6 +165,10 @@
 
     border: 1px solid #E7E7E7;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .form__program-item-wrapper {
@@ -149,6 +184,23 @@
   color: @input-form-text-color;
 }
 
+.form__container {
+
+  max-width: 1000px;
+  margin-right: auto;
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 110px;
+    margin-bottom: 70px;
+    margin-right: 0;
+
+    max-width: none;
+  }
+}
+
 // Персональные данные
 
 .form__personal-date {
@@ -158,10 +210,18 @@
   font-size: 16px;
   line-height: 18px;
 
+  max-width: 1000px;
+  margin-right: auto;
+
   @media (min-width: @tablet) {
     .form-text-style;
 
     border-top: none;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 0;
+    max-width: none;
   }
 }
 
@@ -173,6 +233,22 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__personal-layout {
+    @media (min-width: @tablet) {
+      margin-bottom: 65px;
+    }
+
+  @media (min-width: @desktop) {
+    display: flex;
+
+    gap: 78px;
   }
 }
 
@@ -201,6 +277,12 @@
   @media (min-width: @tablet) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: @desktop) {
+    flex: 1;
+
+    margin-bottom: 0;
+  }
 }
 
 .form__personal-item-title {
@@ -216,6 +298,12 @@
   padding: 13px 46px 15px 16px;
 }
 
+.form__personal-break {
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
 // Комментарий
 
 .form__comment {
@@ -225,6 +313,29 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
+
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__comment-layout {
+  margin-right: auto;
+
+  max-width: 940px;
+
+  @media (min-width: @tablet) {
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 0;
+    padding-right: 0;
+
+    max-width: none;
   }
 }
 
@@ -236,7 +347,6 @@
   margin-bottom: 37px;
 
   @media (min-width: @tablet) {
-    margin-top: 65px;
     margin-bottom: 76px;
 
     .heading;
@@ -266,6 +376,11 @@
     margin: 0 30px;
     margin-bottom: 72px;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    margin-bottom: 61px;
+  }
 }
 
 .form__additional-layout {
@@ -274,6 +389,10 @@
     gap: 37px 124px;
 
     grid-template-columns: repeat(2, minmax(285px, auto));
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -318,8 +437,19 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
+  }
 
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.form__footer-layout {
+  @media (min-width: @tablet) {
     display: flex;
+    align-items: center;
+
+    margin-bottom: 82px;
   }
 }
 
@@ -340,10 +470,19 @@
 
     font-size: 20px;
   }
+
+  @media (min-width: @desktop) {
+    margin-right: 81px;
+    margin-bottom: 0;
+
+    min-width: 568px;
+  }
 }
 
 .form__legend {
   line-height: 16px;
   color: @secondary-text-color;
   text-align: center;
+
+  margin: 0;
 }
