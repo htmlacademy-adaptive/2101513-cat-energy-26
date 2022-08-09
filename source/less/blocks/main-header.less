@@ -8,8 +8,6 @@
     @secondary-text-color);
 
   position: relative;
-
-  box-sizing: border-box;
 }
 
 .main-header__wrapper {
@@ -26,6 +24,10 @@
 
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
 }
 
 .main-header__logo-icon {
@@ -37,8 +39,6 @@
   @media (min-width: @tablet) {
     margin-left: 30px;
     margin-right: 94px;
-
-    flex: 1;
   }
 }
 
