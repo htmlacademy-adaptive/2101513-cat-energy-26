@@ -25,13 +25,17 @@
     top: 0;
     left: 0;
 
-    background: url("../../img/gift/cat-background.jpg") no-repeat center center;
+    background: url("../../img/gift/cat-background.jpg") no-repeat;
 
     z-index: -1;
 
-    @media (min-width: @tablet) {
+    @media (min-width: 321px) {
       background-size: cover;
       background-position: 0 60%;
+    }
+
+    @media (min-width: @desktop) {
+      background-position: -20%;
     }
   }
 
@@ -40,6 +44,16 @@
 
     justify-content: flex-end;
     align-items: center;
+  }
+
+  @media (min-width: @desktop) {
+    height: 288px;
+    min-width: 244px;
+
+    margin-top: 0;
+
+    justify-content: center;
+    align-items: flex-end;
   }
 }
 
@@ -56,6 +70,13 @@
     margin-right: 94px;
     padding-left: 437px;
   }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+
+    margin-right: 0;
+    padding-left: 0;
+  }
 }
 
 .gift__title {
@@ -69,8 +90,8 @@
     display: block;
 
     position: absolute;
-    left: 50%;
     top: -120px;
+    left: 50%;
     transform: translate(-50%);
 
     width: 80px;
@@ -82,6 +103,12 @@
       top: 50%;
       left: -350px;
       transform: translate(0, -50%);
+    }
+
+    @media (min-width: @desktop) {
+      top: -200%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

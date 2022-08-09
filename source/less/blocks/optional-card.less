@@ -13,6 +13,16 @@
 
     grid-template-columns: repeat(2, minmax(300px, auto));
   }
+
+
+  @media (min-width: @desktop) {
+    padding: 19px 0;
+
+    grid-template-columns: 290px 290px 30px 244px;
+
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .optional-card__title {
@@ -50,6 +60,10 @@
 
     justify-content: flex-end;
   }
+
+  @media (min-width: @desktop) {
+    justify-content: space-between;
+  }
 }
 
 .optional-card__term {
@@ -69,5 +83,9 @@
 
   @media (min-width: @tablet) {
     grid-column: 1 / -1;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: 4 / -1;
   }
 }
