@@ -2,7 +2,6 @@
   @media (min-width: @tablet) {
     position: relative;
   }
-
   background-color: @secondary-bg-color;
 }
 
@@ -10,10 +9,9 @@
   min-width: 280px;
 
   margin: 0 20px;
-  margin-bottom: 20px;
 
   @media (min-width: @tablet) {
-    margin: 0 30px 30px;
+    margin: 0 30px;
   }
 }
 
@@ -24,6 +22,38 @@
     max-width: 339px;
 
     padding: 77px 0 53px 50px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+
+    padding: 50px 50px;
+  }
+}
+
+.feature__layout {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  display: grid;
+  gap: 20px 0;
+
+  @media (min-width: @tablet) {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+
+    gap: 30px 0;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+    margin-bottom: 71px;
+
+    gap: 80px 80px;
+
+    grid-template-columns: auto auto;
   }
 }
 
@@ -38,11 +68,18 @@
   position: relative;
 
   @media (min-width: @tablet) {
-    position: static;
-
     padding-left: 0;
 
+    position: static;
+
     .heading;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 73px;
+    padding-left: 160px;
+
+    position: relative;
   }
 
   &::before {
@@ -67,6 +104,17 @@
       background: url("../../img/features/cat_icon--tablet.svg") no-repeat;
 
       left: 460px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 100px;
+      height: 100px;
+
+      background: url("../../img/features/cat_icon--desktop.svg") no-repeat;
+
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
