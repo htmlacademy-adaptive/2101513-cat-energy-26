@@ -1,10 +1,25 @@
 .widget {
   background-color: @additional-bg-color;
 
-  box-sizing: border-box;
-
   @media (min-width: @tablet) {
     background-image: linear-gradient(@basic-bg-color, @basic-bg-color 55%, @additional-bg-color 55%, @additional-bg-color);
+  }
+
+  @media (min-width: @desktop) {
+    background-image: linear-gradient(@basic-bg-color, @basic-bg-color 25%, @additional-bg-color 25%, @additional-bg-color);
+  }
+}
+
+.widget__layout {
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.widget__info-container {
+  @media (min-width: @desktop) {
+    max-width: 436px;
   }
 }
 
@@ -21,6 +36,10 @@
 
     margin: 0 30px;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
 }
 
 .widget__title {
@@ -33,6 +52,12 @@
     .extra-heading;
 
     margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop) {
+    .extra-heading;
+
+    margin-bottom: 146px;
   }
 }
 
@@ -60,6 +85,13 @@
     justify-content: space-between;
 
   }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 0;
+
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
 }
 
 .widget__info {
@@ -71,6 +103,10 @@
 
   @media (min-width: @tablet) {
     gap: 42px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 55px;
   }
 }
 
@@ -166,6 +202,22 @@
     margin-bottom: 0;
 
     text-align: end;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+    line-height: 26px;
+
+    max-width: none;
+
+    text-align: center;
+  }
+}
+
+.widget__summary-price {
+  @media (min-width: @desktop) {
+    display: inline-block;
+    margin-left: 63px;
   }
 }
 
