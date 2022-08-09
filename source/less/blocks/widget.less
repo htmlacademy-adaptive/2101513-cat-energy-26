@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop) {
-    background-image: linear-gradient(@basic-bg-color, @basic-bg-color 25%, @additional-bg-color 25%, @additional-bg-color);
+    background-image: linear-gradient(@basic-bg-color, @basic-bg-color 25%, @secondary-bg-color 25%, @secondary-bg-color);
   }
 }
 
@@ -83,7 +83,6 @@
 
     display: flex;
     justify-content: space-between;
-
   }
 
   @media (min-width: @desktop) {
@@ -225,10 +224,12 @@
   max-width: 280px;
 
   margin: 0 auto;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet) {
     max-width: 591px;
-    min-height: 576px;
+
+    margin-bottom: 25px;
   }
 }
 
@@ -240,7 +241,7 @@
 .widget__input-wrapper {
   max-width: 280px;
 
-  margin: 15px auto 0;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
@@ -253,7 +254,7 @@
   @media (min-width: @tablet) {
     max-width: 592px;
 
-    margin: 25px auto 0;
+    margin: 0 auto;
 
     font-size: 20px;
     line-height: 29px;
