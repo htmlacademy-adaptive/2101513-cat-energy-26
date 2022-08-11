@@ -12,34 +12,35 @@
 
   <!-- Навигация -->
 
-  <header class="main-header">
-    <div class="main-header__wrapper">
-      <div class="main-header__container">
-        <a class="main-header__logo-icon">
-          <img src="./img/main-header/__logo-icon.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
-        </a>
-        <a class="main-header__logo">
-          <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи." width="101" height="18">
-        </a>
-        <button class="main-header__nav-toggle" type="button">
-          <span class="visually-hidden">Открыть навигацию.</span>
-        </button>
-      </div>
-      <nav class="main-nav main-nav--close">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+  <header class="main-header main-header__wrapper main-header__layout">
+
+    <div class="main-header__container">
+      <a class="main-header__logo-icon" href="index.html">
+        <img src="../img/main-header/logo-icon.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
+      </a>
+      <a class="main-header__logo">
+        <img src="../img/main-header/logo.svg" alt="Кэт Энерджи." width="101" height="18">
+      </a>
+      <button class="main-header__nav-toggle" type="button">
+        <span class="visually-hidden">Открыть навигацию.</span>
+      </button>
     </div>
-  </header>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--dark" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--dark" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--dark main-nav__link--current">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+
+</header>
 
   <!-- Основная информация -->
   <main class="main">
