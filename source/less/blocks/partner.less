@@ -1,90 +1,38 @@
 .partner {
-  position: relative;
+  min-width: 280px;
 }
 
 .partner__wrapper {
-  min-width: 280px;
-
   margin: 0 20px;
-  padding: 26px 0 26px;
+  padding: 26px 0;
 
   @media (min-width: @tablet) {
     margin: 0 30px;
-    padding: 57px 40px;
   }
 
   @media (min-width: @desktop) {
-    min-width: 565px;
-
-    padding: 57px 80px;
-
-    position: absolute;
-
-    top: 50%;
-    left: 110px;
-    transform: translateY(-50%);
-
-    background-color: @basic-bg-color;
+    margin: 0 110px;
   }
 }
 
 .partner__address {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .partner__title {
-  .subtitle;
-  font-size: 16px;
+  .title--s;
   text-transform: uppercase;
-
-  @media (min-width: @tablet) {
-    font-size: 20px;
-    line-height: 20px;
-
-    min-width: 171px;
-  }
-
-  @media (min-width: @desktop) {
-    line-height: 26px;
-  }
 }
 
 .partner__subtitle {
-  margin: 0;
-
-  @media (min-width: @tablet) {
-    font-size: 16px;
-    line-height: 20px;
-
-    text-align: end;
-  }
-
-  @media (min-width: @desktop) {
-    text-align: start;
-  }
+  .basic-text-style--s;
 }
 
-.partner__city {
-  @media (min-width: @tablet) {
-    display: inline-block;
-
-    margin-top: 20px;
-  }
-}
 
 .partner__location-picture {
   display: block;
 
   width: 100%;
-  object-fit: cover;
-}
-
-.partner--background-secondary {
-  background-color: @secondary-bg-color;
-}
-
-.partner--margin-top {
-  margin-top: 32px;
 }

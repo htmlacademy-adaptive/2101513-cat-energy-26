@@ -1,20 +1,19 @@
 .promo {
-  .subtitle;
-  line-height: 14px;
-  color: @default-text-color;
-  text-align: center;
+  min-width: 280px;
 
   padding-top: 27px;
 
   position: relative;
+
+  background-image: linear-gradient(@hero-bg-color, @hero-bg-color 302px, @default-bg-color 302px, @default-bg-color);
 
   &::before {
     content: "";
 
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 320px;
+    height: 302px;
 
     position: absolute;
     top: 0;
@@ -22,88 +21,31 @@
     z-index: -1;
 
     background: url("../../img/promo/cat.jpg") no-repeat;
-
-    @media (min-width: 321px) {
-      background-size: cover;
-      background-position: left 50% top 50%;
-    }
-
-    @media (min-width: @tablet) {
-      background: none;
-    }
-
-    @media (min-width: @desktop) {
-      background: url("../../img/promo/cat--desktop.jpg") no-repeat;
-
-      z-index: 1;
-
-      top: -80px;
-      left: 720px;
-    }
-  }
-
-  &::after {
-    content: "";
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-image: linear-gradient(@hero-bg-color, @hero-bg-color 302px, @basic-bg-color 302px, @basic-bg-color);
-
-    @media (min-width: @tablet) {
-      background-image: none;
-    }
-
-    @media (min-width: @desktop) {
-      width: 720px;
-
-      z-index: 2;
-
-      top: -80px;
-      left: 720px;
-
-      background-color: @hero-bg-color;
-    }
-  }
-
-  @media (min-width: @tablet) {
-    min-height: 100vh;
-
-    padding-top: 0;
-
-    background-image: none;
-    background-color: @basic-bg-color;
-  }
-
-  @media (min-width: @desktop) {
-    min-height: 694px;
-  }
-}
-
-.promo__layout {
-  margin-bottom: 20px;
-
-  @media (min-width: @desktop) {
-    margin-bottom: 80px;
   }
 }
 
 .promo__wrapper {
-  min-width: 280px;
-
-  max-width: 1440px;
-
   margin: 0 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.promo__container {
+  min-height: 480px;
+
+  display: flex;
+  flex-flow: column nowrap;
 
   position: relative;
 
-  z-index: 1;
+  text-align: center;
 
   &::before {
     content: "";
@@ -118,104 +60,28 @@
     left: 50%;
     transform: translateX(-50%);
 
-    background: url("../../img/promo/promo-image.jpg") no-repeat center top;
-
-    @media (min-width: @tablet) {
-      width: 709px;
-      height: 609px;
-
-      top: 265px;
-
-      z-index: -1;
-
-      background: url("../../img/promo/promo-image--tablet.png") no-repeat center top;
-    }
-
-    @media (min-width: @desktop) {
-      width: 552px;
-      height: 499px;
-
-      top: 50px;
-      left: 60%;
-
-      background: url("../../img/promo/promo-image--desktop.png") no-repeat center top;
-    }
-  }
-
-  @media (min-width: @tablet) {
-    margin: 0 30px;
-    padding: 60px 90px;
-
-    z-index: 1;
-  }
-
-  @media (min-width: @desktop) {
-    margin: 0 110px;
-    padding: 60px 80px;
-
-    z-index: 3;
-  }
-}
-
-.promo__text-wrapper {
-  @media (min-width: @tablet) {
-    text-align: left;
-
-    max-width: 500px;
+    background: url("../../img/promo/promo-image.jpg") no-repeat;
   }
 }
 
 .promo__title {
-  .heading;
-  color: @default-text-color;
+  .promo-title;
 
   margin-top: 0;
   margin-bottom: 25px;
-
-  @media (min-width: @tablet) {
-    .extra-heading;
-
-    margin-bottom: 41px;
-  }
 }
 
 .promo__subtitle {
-  margin: 0;
-
-  @media (min-width: @tablet) {
-    .subtitle;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
+  .promo-title--xs;
 }
 
 .promo__button {
-  font-size: inherit;
-  line-height: 18px;
-  text-decoration: none;
-  color: inherit;
-
   display: block;
 
-  max-width: 450px;
+  padding: 13px 20px;
+  margin-top: auto;
 
-  margin: 309px auto 0;
-  padding: 9px 26px;
-
-  @media (min-width: @extra-mobile) {
-    margin-top: 345px;
-  }
-
-  @media (min-width: @tablet) {
-    margin: 0;
-    margin-top: 49px;
-    padding: 14px 26px;
-
-    max-width: 244px;
-
-    text-align: center;
-
-    .button;
-    font-size: 20px;
-  }
+  .button--xs;
+  text-decoration: none;
 }
+

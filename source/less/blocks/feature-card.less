@@ -1,0 +1,43 @@
+.feature-card {
+  padding: 30px 33px 18px 20px;
+
+  background-color: @secondary-bg-color;
+  .basic-text-style;
+}
+
+.feature-card__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 60px;
+
+  position: relative;
+
+  .subheading;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background: url("../../img/features/cat_icon.svg") no-repeat;
+  }
+}
+
+.feature-card__subtitle {
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.feature-card__link {
+  .subtitle;
+  text-decoration: none;
+  text-transform: uppercase;
+}

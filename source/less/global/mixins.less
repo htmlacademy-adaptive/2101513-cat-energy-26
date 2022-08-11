@@ -10,31 +10,32 @@
   color: @basic-text-color;
 }
 
+.basic-text-style--s() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: @basic-text-color;
+}
+
+.basic-text-style--m() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @basic-text-color;
+}
+
 .basic-text-style--tablet() {
   font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
-  color: @secondary-text-color;
-}
-
-.secondary-text-style (@font-family; @font-style; @font-weight; @font-size; @line-height; @color) {
-  font-family: @oswald;
-  font-style: @font-style;
-  font-weight: @font-weight;
-  font-size: @font-size;
-  line-height: @line-height;
-  color: @color;
-}
-
-.extra-heading() {
-  font-family: @oswald;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 60px;
 
   color: @secondary-text-color;
 }
@@ -69,17 +70,37 @@
   color: @default-text-color;
 }
 
-.heading() {
+.promo-title() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
 
+  color: @default-text-color;
+}
+
+.promo-title--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: @default-text-color;
+}
+
+.extra-heading() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+
   color: @secondary-text-color;
 }
 
-.sub-heading() {
+.heading() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
@@ -89,7 +110,7 @@
   color: @secondary-text-color;
 }
 
-.title() {
+.subheading() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
@@ -99,12 +120,52 @@
   color: @secondary-text-color;
 }
 
-.subtitle() {
+.title() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.title--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+
+  color: @basic-text-color;
+}
+
+.title--s() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.title--m() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  color: @secondary-text-color;
+}
+
+.subtitle() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
 
   color: @secondary-text-color;
 }
@@ -125,6 +186,16 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  color: @default-text-color;
+}
+
+.button--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 
   color: @default-text-color;
 }

@@ -1,0 +1,62 @@
+.about {
+  min-width: 280px;
+}
+
+.about__wrapper {
+  margin: 0 20px;
+  margin-bottom: 50px;
+
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  .heading;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.about__layout {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(60px, auto));
+  grid-auto-rows: auto;
+
+  gap: 24px;
+}
+
+.about__info {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 70px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background: url("../../img/product-about/leaf.svg") no-repeat;
+  }
+}

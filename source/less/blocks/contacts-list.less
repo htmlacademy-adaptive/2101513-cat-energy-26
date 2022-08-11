@@ -1,11 +1,18 @@
 .contacts-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  margin: 0;
+  padding-left: 0;
 
-  justify-content: center;
+  list-style-type: none;
 }
 
-.contacts-list__icon {
+.contacts-list__layout {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contacts-list__link {
+  padding: 15px 0;
+
   color: @footer-text-color;
 }
