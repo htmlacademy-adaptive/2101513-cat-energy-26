@@ -18,8 +18,7 @@
 
 .main-footer__layout {
   display: grid;
-  grid-template-rows: minmax(124px, auto) minmax(63px, auto) minmax(79px, auto);
-  grid-auto-rows: minmax(65px, auto);
+  grid-template-rows: 94px 1fr 78px;
 
   align-items: center;
 
@@ -40,6 +39,8 @@
   border-top: 1px solid @footer-border-color;
 
   @media (min-width: @tablet) {
+    padding-top: 0;
+
     border-top: none;
   }
 }
@@ -54,6 +55,8 @@
   border-top: 1px solid @footer-border-color;
 
   @media (min-width: @tablet) {
+    padding-top: 0;
+
     border-top: none;
   }
 }
