@@ -22,6 +22,12 @@
   grid-auto-rows: minmax(65px, auto);
 
   align-items: center;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 128px 1fr 163px;
+    grid-template-rows: minmax(147px, auto);
+    grid-auto-rows: minmax(147px, auto);
+  }
 }
 
 .main-footer__logo {
@@ -32,6 +38,10 @@
   padding-top: 20px;
 
   border-top: 1px solid @footer-border-color;
+
+  @media (min-width: @tablet) {
+    border-top: none;
+  }
 }
 
 .main-footer__container {
@@ -42,6 +52,10 @@
   align-items: center;
 
   border-top: 1px solid @footer-border-color;
+
+  @media (min-width: @tablet) {
+    border-top: none;
+  }
 }
 
 .main-footer__copyright {

@@ -8,10 +8,12 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop) {
     margin: 0 110px;
+    margin-bottom: 71px;
   }
 }
 
@@ -21,4 +23,15 @@
   grid-auto-rows: auto;
 
   gap: 20px;
+
+  @media (min-width: @tablet) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    gap: 0 80px;
+  }
 }

@@ -1,5 +1,9 @@
 .main-nav--close {
   display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -35,6 +39,7 @@
   padding: 23px 20px;
 
   color: inherit;
+  background-color: @default-bg-color;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -43,6 +48,7 @@
   }
 
   @media (min-width: @desktop) {
+    background-color: transparent;
     .header-text-style--desktop;
   }
 }
