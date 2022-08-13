@@ -11,6 +11,25 @@
 
   background-color: @hero-bg-color;
 
+  @media (min-width: @tablet) {
+    min-height: 200px;
+
+    padding: 70px 124px 70px 350px;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 288px;
+    min-width: 245px;
+
+    padding: 160px 42px 42px;
+
+    align-items: flex-end;
+    justify-content: center;
+  }
+
   &::before {
     content: "";
 
@@ -23,12 +42,20 @@
     top: 0;
     left: 0;
 
-    background: url("../../img/gift/cat-background.jpg");
+    background: url("../../img/gift/cat-background.jpg") no-repeat;
 
     z-index: -1;
 
     @media (min-width: 321px) {
       background-size: cover;
+    }
+
+    @media (min-width: @tablet) {
+      background-position: 0px -300px;
+    }
+
+    @media (min-width: @desktop) {
+      background-position: 0px 0px;
     }
   }
 
@@ -45,7 +72,17 @@
     left: 50%;
     transform: translateX(-50%);
 
-    background: url("../../img/gift/icon_gift.svg");
+    background: url("../../img/gift/icon_gift.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      top: 50%;
+      left: 10%;
+    }
+
+    @media (min-width: @tablet) {
+      top: 20%;
+      left: 50%;
+    }
   }
 }
 
@@ -56,4 +93,12 @@
   .basic-text-style--l;
   color: @default-text-color;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    text-align: start;
+  }
+
+  @media (min-width: @tablet) {
+    text-align: center;
+  }
 }

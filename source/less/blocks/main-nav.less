@@ -35,6 +35,10 @@
 
   &:last-child {
     border-bottom: 1px solid @basic-border-color;
+
+    @media (min-width: @tablet) {
+      border-bottom: none;
+    }
   }
 }
 

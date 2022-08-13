@@ -44,6 +44,7 @@
     <!-- Каталог продукции -->
 
   <main class="main">
+
     <section class="catalog">
 
       <div class="catalog__header">
@@ -223,8 +224,8 @@
 
         <section class="catalog__optional">
           <div class="catalog__optional-container">
-            <b class="catalog__optional-title">Показать еще 100500 товаров</b>
-            <p class="catalog__optional-subtitle">На самом деле вкусов гораздо больше!</p>
+            <b class="catalog__optional-title">Показать еще<br class="catalog__optional-break"> 100500 товаров</b>
+            <p class="catalog__optional-subtitle">На самом деле вкусов<br class="catalog__optional-break"> гораздо больше!</p>
             <button class="catalog__optional-button button button--bg-grey">Показать все</button>
           </div>
         </section>
@@ -238,48 +239,52 @@
     <section class="catalog-additional catalog-additional__wrapper">
       <h2 class="catalog-additional__title">Дополнительные товары</h2>
 
-      <div class="catalog-additional__layout">
-        <article class="card-additional card-additional__layout">
-          <h3 class="card-additional__title">Сахарозаменитель</h3>
-          <dl class="card-additional__info">
-            <dt class="card-additional__term">1 упаковка (100 г)</dt>
-            <dd class="card-additional__def">200 Р.</dd>
-          </dl>
-          <button class="card-additional__button button" type="button">Заказать</button>
-        </article>
+      <div class="catalog-additional__section-layout">
 
-        <article class="card-additional card-additional__layout">
-          <h3 class="card-additional__title">Сахарозаменитель</h3>
-          <dl class="card-additional__info">
-            <dt class="card-additional__term">1 упаковка (100 г)</dt>
-            <dd class="card-additional__def">200 Р.</dd>
-          </dl>
-          <button class="card-additional__button button" type="button">Заказать</button>
-        </article>
+        <div class="catalog-additional__layout">
+          <article class="card-additional card-additional__layout">
+            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <dl class="card-additional__info">
+              <dt class="card-additional__term">1 упаковка (100 г)</dt>
+              <dd class="card-additional__def">200 Р.</dd>
+            </dl>
+            <button class="card-additional__button button" type="button">Заказать</button>
+          </article>
 
-        <article class="card-additional card-additional__layout">
-          <h3 class="card-additional__title">Сахарозаменитель</h3>
-          <dl class="card-additional__info">
-            <dt class="card-additional__term">1 упаковка (100 г)</dt>
-            <dd class="card-additional__def">200 Р.</dd>
-          </dl>
-          <button class="card-additional__button button" type="button">Заказать</button>
-        </article>
+          <article class="card-additional card-additional__layout">
+            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <dl class="card-additional__info">
+              <dt class="card-additional__term">1 упаковка (100 г)</dt>
+              <dd class="card-additional__def">200 Р.</dd>
+            </dl>
+            <button class="card-additional__button button" type="button">Заказать</button>
+          </article>
 
-        <article class="card-additional card-additional__layout">
-          <h3 class="card-additional__title">Сахарозаменитель</h3>
-          <dl class="card-additional__info">
-            <dt class="card-additional__term">1 упаковка (100 г)</dt>
-            <dd class="card-additional__def">200 Р.</dd>
-          </dl>
-          <button class="card-additional__button button" type="button">Заказать</button>
-        </article>
+          <article class="card-additional card-additional__layout">
+            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <dl class="card-additional__info">
+              <dt class="card-additional__term">1 упаковка (100 г)</dt>
+              <dd class="card-additional__def">200 Р.</dd>
+            </dl>
+            <button class="card-additional__button button" type="button">Заказать</button>
+          </article>
+
+          <article class="card-additional card-additional__layout card-additional--border">
+            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <dl class="card-additional__info">
+              <dt class="card-additional__term">1 упаковка (100 г)</dt>
+              <dd class="card-additional__def">200 Р.</dd>
+            </dl>
+            <button class="card-additional__button button" type="button">Заказать</button>
+          </article>
+        </div>
 
       <!-- Подарок -->
 
         <section class="gift">
           <p class="gift__title">Закажите все<br class="gifr__break"> и получите чехол для<br class="gifr__break"> кота в подарок!</p>
         </section>
+
       </div>
 
     </section>
@@ -288,17 +293,18 @@
 
     <aside class="partner partner--background-secondary">
       <h2 class="visually-hidden">Где нас можно найти.</h2>
-      <div class="partner__wrapper">
-        <div class="partner__address">
-          <b class="partner__title">Приглашаем<br class="partner__break">к сотрудничеству<br class="partner__break"> дилеров!</b>
-          <p class="partner__subtitle">ул. Большая<br class="partner__break"> Конюшенная, д. 19/8<br class="partner__break"><span class="partner__city">Санкт-Петербург</span></p>
-        </div>
+
+      <div class="partner__address partner__wrapper">
+        <b class="partner__title">Приглашаем<br class="partner__break">к сотрудничеству<br class="partner__break"> дилеров!</b>
+        <p class="partner__subtitle">ул. Большая<br class="partner__break"> Конюшенная, д. 19/8<br class="partner__break"><br class="partner__additional-break">Санкт-Петербург</p>
       </div>
+
       <div class="partner__location">
-        <img class="partner__location-picture" src="./img/partner/__location-picture.jpg" width="320" height="362" alt="Карта Санкт-Петербурга.">
+        <img class="partner__location-picture" src="./img/partner/location-picture.jpg" width="320" height="362" alt="Карта Санкт-Петербурга.">
       </div>
       </div>
     </aside>
+
   </main>
 
     <!-- Футер -->

@@ -5,6 +5,14 @@
 
   border-top: 1px solid @catalog-border-color;
   border-bottom: 1px solid @catalog-border-color;
+
+  @media (min-width: @tablet) {
+    padding-top: 26px;
+    padding-bottom: 0;
+
+    border-top: none;
+    border-bottom: none;
+  }
 }
 
 .catalog__header {
@@ -24,30 +32,73 @@
   margin-bottom: 41px;
 
   .subheading--m;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 163px;
+
+    .extra-heading;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 165px;
+  }
 }
 
 .catalog__layout {
   display: grid;
 
   gap: 40px;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 141px 60px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 144px 80px;
+  }
 }
 
-.catalog__card {
-  padding-top: 25px;
+.catalog__wrapper {
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 68px;
+  }
 
-  border-top: 1px solid @card-border-color;
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    margin-bottom: 75px;
+  }
 }
 
 .catalog__optional {
   text-align: center;
 
   border-top: 1px solid @card-border-color;
+
+  @media (min-width: @tablet) {
+    border-top: none;
+    border: 2px solid @catalog-border-color--additional;
+  }
 }
 
 .catalog__optional-container {
   margin: 0 20px;
 
   padding-top: 70px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 161px 36px 38px;
+
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
 
 .catalog__optional-title {
@@ -57,6 +108,22 @@
   display: inline-block;
 
   .title--s;
+
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 23px;
+
+    .title--s-additional;
+  }
+}
+
+.catalog__optional-break {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: inline-block;
+  }
 }
 
 .catalog__optional-subtitle {
@@ -64,6 +131,10 @@
   margin-bottom: 0;
 
   .basic-text-style--xs;
+
+  @media (min-width: @tablet) {
+    .basic-text-style--ml-additional
+  }
 }
 
 .catalog__optional-button {
@@ -73,6 +144,10 @@
   min-width: 100%;
 
   color: @basic-text-color;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+  }
 }
 
 .button--bg-grey {
