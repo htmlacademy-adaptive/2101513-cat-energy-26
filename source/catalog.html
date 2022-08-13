@@ -25,7 +25,7 @@
       </button>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav main-nav--close">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--dark" href="index.html">Главная</a>
@@ -44,183 +44,193 @@
     <!-- Каталог продукции -->
 
   <main class="main">
-    <section class="catalog catalog__wrapper">
+    <section class="catalog">
 
-      <header class="catalog__header">
+      <div class="catalog__header">
         <h1 class="catalog__title">Каталог продукции</h1>
-      </header>
+        <h2 class="visually-hidden">Основные товары.</h2>
+      </div>
 
-      <h2 class="visually-hidden">Основные товары.</h2>
+      <div class="catalog__layout catalog__wrapper">
 
-      <div class="catalog__card-layout">
-        <div class="catalog__card">
-        <article class="card card__wrapper">
-          <img class="card__image" src="./img/card/card-chicken-500.png" width="68" height="86" alt="Еда для набора массы со вкусом курицы.">
-          <div class="card__text-wrapper">
-            <h3 class="card__title">Cat Energy<br class="card__break">PRO<br class="card__break--tablet">500 г</h3>
-            <dl class="card__info">
-              <div class="card__info-item">
-                <dt class="card__info-term">Масса</dt>
-                <dd class="card__info-def">500 г</dd>
-              </div>
-              <div class="card__info-item">
-                <dt class="card__info-term">Вкус</dt>
-                <dd class="card__info-def">Курица</dd>
-              </div>
-              <div class="card__info-item">
-                <dt class="card__info-term">Цена</dt>
-                <dd class="card__info-def">700 Р.</dd>
-              </div>
-            </dl>
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="68" height="86" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 500 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">500 г</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">700 Р.</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card__button button" type="button">Заказать</button>
           </div>
-          <button class="card__button button" type="button">Заказать</button>
         </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-            <img class="card__image" src="./img/card/card-chicken-1000.png" width="84" height="100" alt="Еда для набора массы со вкусом курицы.">
-            <div class="card__text-wrapper">
-              <h3 class="card__title">Cat Energy<br class="card__break">PRO<br class="card__break--tablet"> 1000 г</h3>
-              <dl class="card__info">
-                <div class="card__info-item">
-                  <dt class="card__info-term">Масса</dt>
-                  <dd class="card__info-def">1000 г</dd>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="84" height="100" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 1000 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">1000 г</dd>
                 </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Вкус</dt>
-                  <dd class="card__info-def">Курица</dd>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
                 </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Цена</dt>
-                  <dd class="card__info-def">1000 Р.</dd>
-                </div>
-              </dl>
-            </div>
-            <button class="card__button button" type="button">Заказать</button>
-          </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-            <img class="card__image" src="./img/card/card-fish-500.png" width="68" height="86" alt="Еда для набора массы со вкусом рыбы.">
-            <div class="card__text-wrapper">
-              <h3 class="card__title">Cat Energy<br class="card__break">PRO<br class="card__break--tablet"> 500 г</h3>
-              <dl class="card__info">
-                <div class="card__info-item">
-                  <dt class="card__info-term">Масса</dt>
-                  <dd class="card__info-def">500 г</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Вкус</dt>
-                  <dd class="card__info-def">Рыба</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Цена</dt>
-                  <dd class="card__info-def">700 Р.</dd>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">1000 Р.</dd>
                 </div>
               </dl>
             </div>
             <button class="card__button button" type="button">Заказать</button>
-          </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-          <img class="card__image" src="./img/card/card-fish-1000.png" width="84" height="100" alt="Еда для набора массы со вкусом рыбы.">
-          <div class="card__text-wrapper">
-            <h3 class="card__title">Cat Energy<br class="card__break">PRO<br class="card__break--tablet"> 1000 г</h3>
-            <dl class="card__info">
-              <div class="card__info-item">
-                <dt class="card__info-term">Масса</dt>
-                <dd class="card__info-def">1000 г</dd>
-              </div>
-              <div class="card__info-item">
-                <dt class="card__info-term">Вкус</dt>
-                <dd class="card__info-def">Рыба</dd>
-              </div>
-              <div class="card__info-item">
-                <dt class="card__info-term">Цена</dt>
-                <dd class="card__info-def">1000 Р.</dd>
-              </div>
-            </dl>
           </div>
-          <button class="card__button button" type="button">Заказать</button>
         </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="68" height="86" alt="Еда для похудения со вкусом гречки.">
-            <div class="card__text-wrapper">
-              <h3 class="card__title">Cat Energy<br class="card__break">Slim<br class="card__break--tablet"> 500 г</h3>
-              <dl class="card__info">
-                <div class="card__info-item">
-                  <dt class="card__info-term">Масса</dt>
-                  <dd class="card__info-def">500 г</dd>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="68" height="86" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 500 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">500 г</dd>
                 </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Вкус</dt>
-                  <dd class="card__info-def">Гречка</dd>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
                 </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Цена</dt>
-                  <dd class="card__info-def">400 Р.</dd>
-                </div>
-              </dl>
-            </div>
-            <button class="card__button button" type="button">Заказать</button>
-          </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-            <img class="card__image" src="./img/card/card-buckwheat-1000.png" width="84" height="100" alt="Еда для похудения со вкусом гречки.">
-            <div class="card__text-wrapper">
-              <h3 class="card__title">Cat Energy<br class="card__break">Slim<br class="card__break--tablet"> 1000 г</h3>
-              <dl class="card__info">
-                <div class="card__info-item">
-                  <dt class="card__info-term">Масса</dt>
-                  <dd class="card__info-def">1000 г</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Вкус</dt>
-                  <dd class="card__info-def">Гречка</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Цена</dt>
-                  <dd class="card__info-def">700 Р.</dd>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">700 Р.</dd>
                 </div>
               </dl>
             </div>
             <button class="card__button button" type="button">Заказать</button>
-          </article>
-        </div>
-        <div class="catalog__card">
-          <article class="card card__wrapper">
-          <img class="card__image" src="./img/card/card-rice-500.png" width="68" height="86" alt="Еда для похудения со вкусом риса.">
-            <div class="card__text-wrapper">
-              <h3 class="card__title">Cat Energy<br class="card__break">Slim<br class="card__break--tablet"> 500 г</h3>
-              <dl class="card__info">
-                <div class="card__info-item">
-                  <dt class="card__info-term">Масса</dt>
-                  <dd class="card__info-def">500 г</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Вкус</dt>
-                  <dd class="card__info-def">Рис</dd>
-                </div>
-                <div class="card__info-item">
-                  <dt class="card__info-term">Цена</dt>
-                  <dd class="card__info-def">500 Р.</dd>
-                </div>
-              </dl>
-            </div>
-            <button class="card__button button" type="button">Заказать</button>
-          </article>
-        </div>
-        <section class="catalog__detail-card">
-          <div class="catalog__detail-card-info">
-            <b class="catalog__detail-card-title">Показать еще<br class="catalog__detail-card-break"> 100500 товаров</b>
-            <p class="catalog__detail-card-subtitle">На самом деле вкусов<br class="catalog__detail-card-break"> гораздо больше!</p>
           </div>
-          <button class="catalog__detail-card-button catalog__detail-card-button--background-sec button" type="button">Показать все</button>
+        </article>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="84" height="100" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 1000 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">1000 г</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">1000 Р.</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card__button button" type="button">Заказать</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="68" height="86" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 500 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">500 г</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">700 Р.</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card__button button" type="button">Заказать</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="84" height="100" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 1000 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">1000 г</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">1000 Р.</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card__button button" type="button">Заказать</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__wrapper card__layout">
+            <img class="card__image" src="./img/card/card-buckwheat-500.png" width="68" height="86" alt="Питательная гречка в красивой упаковке.">
+            <div class="card__info">
+              <h3 class="card__title">Cat Energy<br class="card__break"> PRO<br class="card__break--tablet"> 500 г</h3>
+              <dl class="card__detail">
+                <div class="card__detail-container">
+                  <dt class="card__term">Масса</dt>
+                  <dd class="card__def">500 г</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Вкус</dt>
+                  <dd class="card__def">Курица</dd>
+                </div>
+                <div class="card__detail-container">
+                  <dt class="card__term">Цена</dt>
+                  <dd class="card__def">700 Р.</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card__button button" type="button">Заказать</button>
+          </div>
+        </article>
+
+        <section class="catalog__optional">
+          <div class="catalog__optional-container">
+            <b class="catalog__optional-title">Показать еще 100500 товаров</b>
+            <p class="catalog__optional-subtitle">На самом деле вкусов гораздо больше!</p>
+            <button class="catalog__optional-button button button--bg-grey">Показать все</button>
+          </div>
         </section>
+
+      </div>
+
     </section>
 
     <!-- Дополнительные товары -->

@@ -1,0 +1,47 @@
+.card {
+  padding-top: 25px;
+
+  border-top: 1px solid @card-border-color;
+}
+
+.card__wrapper {
+  margin: 0 20px;
+}
+
+.card__layout {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: minmax(110px, auto) auto;
+
+  gap: 20px 0;
+}
+
+.card__image {
+  align-self: center;
+  justify-self: center;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  .title--s;
+}
+
+.card__break--tablet {
+  display: none;
+}
+
+.card__detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .basic-text-style--xs;
+}
+
+.card__button {
+  padding: 10px 25px;
+
+  grid-column: 1 / -1;
+}
