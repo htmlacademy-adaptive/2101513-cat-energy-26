@@ -44,38 +44,42 @@
   <!-- Форма подбора программы -->
 
   <main class="main">
+
     <form class="form form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+
       <div class="form__header">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </div>
-        <!-- Данные питомца -->
 
-      <div class="form__container">
+      <!-- Данные питомца -->
 
-        <div class="form__pet-date">
-          <div class="form__pet-date-wrapper">
-            <h2 class="visually-hidden">Данные питомца.</h2>
-            <div class="form__pet-item-wrapper">
-              <label class="form__pet-title" for="name">Имя:*</label>
-              <input class="form__pet-input" type="text" id="name" placeholder="Барсик" required>
-            </div>
-            <div class="form__pet-item-wrapper">
-              <label class="form__pet-title" for="weight">Вес (кг):*</label>
-              <input class="form__pet-input" type="text" id="weight" placeholder="7" required>
-            </div>
-            <div class="form__pet-item-wrapper">
-              <label class="form__pet-title" for="age">Возраст (лет):</label>
-              <input class="form__pet-input" type="text" id="age" placeholder="7">
-            </div>
+      <div class="form__pet-container">
+
+        <div class="form__pet-date form__pet-date-wrapper form__pet-date-layout">
+
+          <h2 class="visually-hidden">Данные питомца.</h2>
+          <div class="form__pet-item-wrapper">
+            <label class="form__pet-title" for="name">Имя:*</label>
+            <input class="form__pet-input" type="text" id="name" placeholder="Барсик" required>
           </div>
+          <div class="form__pet-item-wrapper">
+            <label class="form__pet-title" for="weight">Вес (кг):*</label>
+            <input class="form__pet-input" type="text" id="weight" placeholder="7" required>
+          </div>
+          <div class="form__pet-item-wrapper">
+            <label class="form__pet-title" for="age">Возраст (лет):</label>
+            <input class="form__pet-input" type="text" id="age" placeholder="7">
+          </div>
+
         </div>
 
         <!-- Программа -->
 
         <div class="form__program">
 
-          <div class="form__program-wrapper">
+          <div class="form__program-wrapper form__program-layout">
+
             <h2 class="visually-hidden">Необходимая программа.</h2>
             <div class="form__program-item-wrapper">
               <input class="form__program-input visually-hidden" type="radio" name="program" id="slim">
@@ -89,20 +93,22 @@
               <input class="form__program-input visually-hidden" type="radio" name="program" id="help">
               <label class="form__program-title" for="help">Не знаю (Нужен ваш совет)</label>
             </div>
+
           </div>
 
         </div>
 
       </div>
-        <!-- Персональные данные -->
 
-        <div class="form__personal-date">
+      <!-- Персональные данные -->
 
-          <div class="form__personal-date-wrapper">
-            <h2 class="form__personal-title">Контактные данные<br class="form__personal-break"> (владельца кота)</h2>
+      <div class="form__personal-date">
+
+        <div class="form__personal-date-wrapper">
+
+          <h2 class="form__personal-title">Контактные данные<br class="form__personal-break"> (владельца кота)</h2>
 
           <div class="form__personal-layout">
-
             <div class="form__personal-item-wrapper">
               <label class="form__personal-item-title" for="email">E-mail:*</label>
               <input class="form__personal-input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -111,23 +117,22 @@
               <label class="form__personal-item-title" for="phone">Телефон:*</label>
               <input class="form__personal-input" type="tel" name="phone-number" id="phone" placeholder="8 (960) 900-60-90" required>
             </div>
-
           </div>
 
-          </div>
         </div>
 
-        <!-- Комментарии -->
-      <div class="form__comment">
-        <div class="form__comment-layout">
-          <h2 class="form__comment-title">Комментарий</h2>
-          <textarea class="form__comment-area" name="comment" cols="31" rows="10">Расскажите обо всех повадках кота</textarea>
-        </div>
+      </div>
+
+      <!-- Комментарии -->
+
+      <div class="form__comment form__comment-wrapper">
+        <h2 class="form__comment-title">Комментарий</h2>
+        <textarea class="form__comment-area" name="comment" cols="31" rows="10">Расскажите обо всех повадках кота</textarea>
       </div>
 
       <!-- Дополнительно -->
 
-      <div class="form__additional">
+      <div class="form__additional form__additional-wrapper">
         <h2 class="form__additional-title">Дополнительно</h2>
 
           <div class="form__additional-layout">
@@ -157,7 +162,8 @@
       </div>
 
       <!-- Кнопка -->
-      <div class="form__footer form__footer-layout">
+
+      <div class="form__footer form__footer-wrapper form__footer-layout">
         <button class="form__button button" type="submit">Отправить заявку</button>
         <p class="form__legend"><sup>*</sup> — Обязательные поля</p>
       </div>
@@ -165,19 +171,20 @@
 
     <!-- Сотрудничество -->
 
-    <aside class="partner partner--background-secondary partner--margin-top">
+    <aside class="partner partner--background-secondary">
       <h2 class="visually-hidden">Где нас можно найти.</h2>
-      <div class="partner__wrapper">
-        <div class="partner__address">
-          <b class="partner__title">Приглашаем<br class="partner__break"> к сотрудничеству<br class="partner__break"> дилеров!</b>
-          <p class="partner__subtitle">ул. Большая<br class="partner__break"> Конюшенная, д. 19/8<br class="partner__break"><br class="partner__additional-break">Санкт-Петербург</p>
-        </div>
+
+      <div class="partner__address partner__wrapper">
+        <b class="partner__title">Приглашаем<br class="partner__break"> к сотрудничеству<br class="partner__break"> дилеров!</b>
+        <p class="partner__subtitle">ул. Большая<br class="partner__break"> Конюшенная, д. 19/8<br class="partner__break"><br class="partner__additional-break">Санкт-Петербург</p>
       </div>
+
       <div class="partner__location">
-        <img class="partner__location-picture" src="./img/partner/__location-picture.jpg" width="320" height="362" alt="Карта Санкт-Петербурга.">
+        <img class="partner__location-picture" src="./img/partner/location-picture.jpg" width="320" height="362" alt="Карта Санкт-Петербурга.">
       </div>
-      </div>
+
     </aside>
+
   </main>
 
     <!-- Футер -->
@@ -186,7 +193,7 @@
       <div class="main-footer__wrapper main-footer__layout">
 
         <a class="main-footer__logo">
-          <img src="./img/main-header/__logo.svg" alt="Кэт Энерджи." width="101" height="18">
+          <img src="./img/main-header/logo.svg" alt="Кэт Энерджи." width="101" height="18">
         </a>
 
         <h2 class="visually-hidden">Контакты.</h2>
