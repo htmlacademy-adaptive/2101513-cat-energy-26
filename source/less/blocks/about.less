@@ -89,16 +89,11 @@
     height: 60px;
 
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
-
-    background: url("../../img/product-about/leaf.svg") no-repeat;
 
     @media (min-width: @tablet) {
       top: 40px;
-      left: 0;
-      transform: none;
     }
   }
 
@@ -120,10 +115,34 @@
   }
 }
 
+.about__item--food {
+  &::before {
+    background: url("../../img/about/about__item--food.svg") no-repeat;
+  }
+}
+
+.about__item--format {
+  &::before {
+    background: url("../../img/about/about__item--format.svg") no-repeat;
+  }
+}
+
+.about__item--meal {
+  &::before {
+    background: url("../../img/about/about__item--meal.svg") no-repeat;
+  }
+}
+
+.about__item--period {
+  &::before {
+    background: url("../../img/about/about__item--period.svg") no-repeat;
+  }
+}
+
 .about__info {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 70px;
+  padding-left: 80px;
 
   @media (min-width: @tablet) {
     padding-left: 0;

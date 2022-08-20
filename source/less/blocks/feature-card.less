@@ -1,6 +1,8 @@
 .feature-card {
   padding: 30px 33px 18px 20px;
 
+  position: relative;
+
   background-color: @secondary-bg-color;
 
   @media (min-width: @tablet) {
@@ -9,18 +11,6 @@
 
   @media (min-width: @desktop) {
     padding: 77px 53px 55px;
-  }
-}
-
-.feature-card__container {
-  position: relative;
-
-  @media (min-width: @tablet) {
-    max-width: 345px;
-  }
-
-  @media (min-width: @desktop) {
-    max-width: none;
   }
 
   &::before {
@@ -32,8 +22,8 @@
     height: 50px;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 22px;
 
     background: url("../../img/features/cat_icon.svg") no-repeat;
 
@@ -41,9 +31,9 @@
       width: 200px;
       height: 211px;
 
-      top: 0;
-      left: 370px;
-      transform: none;
+      top: 50%;
+      left: 446px;
+      transform: translateY(-50%);
 
       background: url("../../img/features/cat_icon--tablet.svg") no-repeat;
     }
@@ -52,12 +42,22 @@
       width: 100px;
       height: 100px;
 
-      top: -40px;
-      left: 0;
+      top: 47px;
+      left: 52px;
       transform: none;
 
       background: url("../../img/features/cat_icon--desktop.svg") no-repeat;
     }
+  }
+}
+
+.feature-card__container {
+  @media (min-width: @tablet) {
+    max-width: 345px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
   }
 }
 
@@ -84,28 +84,56 @@
 
 .feature-card__subtitle {
   margin-top: 0;
+  margin-bottom: 23px;
 
   color: @secondary-text-color;
 }
 
 .feature-card__link {
+  padding-top: 15px;
+
   display: block;
 
-  margin-top: 23px;
+  position: relative;
 
   .subtitle;
   text-decoration: none;
   text-transform: uppercase;
 
+  border-top: 1px solid @secondary-border-color;
+
   @media (min-width: @tablet) {
-    margin-top: 48px;
+    margin-top: 52px;
+    padding-top: 0;
 
     .subtitle--m;
+
+    border-top: none;
   }
 
   @media (min-width: @desktop) {
     margin-top: 23px;
 
     .subtitle--m;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 24px;
+    height: 12px;
+
+    position: absolute;
+    top: 50%;
+    left: 100px;
+
+    background: url("../../img/features/icon_arrow.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      transform: translateY(-50%);
+      left: 130px;
+    }
   }
 }

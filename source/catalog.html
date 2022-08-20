@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Каталог товаров</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -44,6 +45,8 @@
     <!-- Каталог продукции -->
 
   <main class="main">
+
+    <!-- Основные товары -->
 
     <section class="catalog">
 
@@ -223,6 +226,8 @@
         </article>
 
         <section class="catalog__optional">
+          <h2 class="visually-hidden">Дополнительные товары.</h2>
+
           <div class="catalog__optional-container">
             <b class="catalog__optional-title">Показать еще<br class="catalog__optional-break"> 100500 товаров</b>
             <p class="catalog__optional-subtitle">На самом деле вкусов<br class="catalog__optional-break"> гораздо больше!</p>
@@ -242,14 +247,6 @@
       <div class="catalog-additional__section-layout">
 
         <div class="catalog-additional__layout">
-          <article class="card-additional card-additional__layout">
-            <h3 class="card-additional__title">Сахарозаменитель</h3>
-            <dl class="card-additional__info">
-              <dt class="card-additional__term">1 упаковка (100 г)</dt>
-              <dd class="card-additional__def">200 Р.</dd>
-            </dl>
-            <button class="card-additional__button button" type="button">Заказать</button>
-          </article>
 
           <article class="card-additional card-additional__layout">
             <h3 class="card-additional__title">Сахарозаменитель</h3>
@@ -261,29 +258,39 @@
           </article>
 
           <article class="card-additional card-additional__layout">
-            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <h3 class="card-additional__title">Питьевая вода</h3>
             <dl class="card-additional__info">
-              <dt class="card-additional__term">1 упаковка (100 г)</dt>
-              <dd class="card-additional__def">200 Р.</dd>
+              <dt class="card-additional__term">5 литров</dt>
+              <dd class="card-additional__def">50 Р.</dd>
+            </dl>
+            <button class="card-additional__button button" type="button">Заказать</button>
+          </article>
+
+          <article class="card-additional card-additional__layout">
+            <h3 class="card-additional__title">Молоко</h3>
+            <dl class="card-additional__info">
+              <dt class="card-additional__term">1 литр</dt>
+              <dd class="card-additional__def">100 Р.</dd>
             </dl>
             <button class="card-additional__button button" type="button">Заказать</button>
           </article>
 
           <article class="card-additional card-additional__layout card-additional--border">
-            <h3 class="card-additional__title">Сахарозаменитель</h3>
+            <h3 class="card-additional__title">Витамины</h3>
             <dl class="card-additional__info">
-              <dt class="card-additional__term">1 упаковка (100 г)</dt>
-              <dd class="card-additional__def">200 Р.</dd>
+              <dt class="card-additional__term">1 упаковка (30 г)</dt>
+              <dd class="card-additional__def">300 Р.</dd>
             </dl>
             <button class="card-additional__button button" type="button">Заказать</button>
           </article>
+
         </div>
 
       <!-- Подарок -->
 
-        <section class="gift">
+        <div class="gift">
           <p class="gift__title">Закажите все<br class="gifr__break"> и получите чехол для<br class="gifr__break"> кота в подарок!</p>
-        </section>
+        </div>
 
       </div>
 
@@ -299,9 +306,11 @@
         <p class="partner__subtitle">ул. Большая<br class="partner__break"> Конюшенная, д. 19/8<br class="partner__break"><br class="partner__additional-break">Санкт-Петербург</p>
       </div>
 
-      <div class="partner__location">
-        <img class="partner__location-picture" src="./img/partner/location-picture.jpg" width="320" height="362" alt="Карта Санкт-Петербурга.">
-      </div>
+      <iframe class="partner__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru"
+      allowfullscreen
+      title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
+      width="320" height="362">
+      </iframe>
 
     </aside>
 
