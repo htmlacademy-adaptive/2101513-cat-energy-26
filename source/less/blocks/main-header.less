@@ -60,12 +60,68 @@
 
   padding: 30px 0;
 
-  background: transparent url("../../img/main-header/toggle.svg") no-repeat center center;
+  position: relative;
+
   border: none;
+  background-color: transparent;
   cursor: pointer;
 
   @media (min-width: @tablet) {
     display: none;
+  }
+}
+
+.main-header__nav-toggle--closed {
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-shadow: 0 8px 0 0 @basic-bg-color, 0 16px 0 0 @basic-bg-color;
+
+    background-color: @basic-bg-color;
+  }
+}
+
+.main-header__nav-toggle--opened {
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 2px;
+    height: 25px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    background-color: @basic-bg-color;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 2px;
+    height: 25px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    background-color: @basic-bg-color;
   }
 }
 
@@ -74,7 +130,7 @@
 
   position: absolute;
 
-  top: 65px;
+  top: 64px;
   left: 0;
 
   z-index: 3;
