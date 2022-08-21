@@ -1,9 +1,32 @@
+.main-nav {
+  width: 100%;
+
+  position: absolute;
+
+  top: 64px;
+  left: 0;
+
+  z-index: 3;
+
+  @media (min-width: @tablet) {
+    width: auto;
+
+    position: static;
+  }
+}
+
 .main-nav--close {
   display: none;
 
   @media (min-width: @tablet) {
     display: block;
   }
+}
+
+.main-nav--nojs {
+  display: block;
+
+  position: static;
 }
 
 .main-nav__list {
