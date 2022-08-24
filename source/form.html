@@ -84,14 +84,17 @@
             <h2 class="visually-hidden">Необходимая программа.</h2>
             <div class="form__program-item-wrapper">
               <input class="form__program-input visually-hidden" type="radio" name="program" id="slim">
+              <span class="form__program-controls"></span>
               <label class="form__program-title" for="slim">Похудение</label>
             </div>
             <div class="form__program-item-wrapper">
               <input class="form__program-input visually-hidden" type="radio" name="program" id="gain">
+              <span class="form__program-controls"></span>
               <label class="form__program-title" for="gain">Набор массы</label>
             </div>
             <div class="form__program-item-wrapper">
               <input class="form__program-input visually-hidden" type="radio" name="program" id="help">
+              <span class="form__program-controls"></span>
               <label class="form__program-title" for="help">Не знаю (Нужен ваш совет)</label>
             </div>
 
@@ -113,6 +116,13 @@
             <div class="form__personal-item-wrapper">
               <label class="form__personal-item-title" for="email">E-mail:*</label>
               <input class="form__personal-input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+              <svg class="form__personal-icon" width="20" height="15" viewBox="0 0 20 15" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3"/>
+                <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3"/>
+                <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
+              </svg>
             </div>
             <div class="form__personal-item-wrapper">
               <label class="form__personal-item-title" for="phone">Телефон:*</label>
@@ -140,21 +150,25 @@
 
             <div class="form__add-item-wrapper">
               <input class="form__add-input visually-hidden" type="checkbox" name="sweetener" id="sweetener">
+              <span class="form__add-controls"></span>
               <label class="form__add-item-title" for="sweetener">Сахарозаменитель</label>
             </div>
 
             <div class="form__add-item-wrapper">
               <input class="form__add-input visually-hidden" type="checkbox" name="water" id="water">
+              <span class="form__add-controls"></span>
               <label class="form__add-item-title" for="water">Питьевая вода</label>
             </div>
 
             <div class="form__add-item-wrapper">
               <input class="form__add-input visually-hidden" type="checkbox" name="milk" id="milk">
+              <span class="form__add-controls"></span>
               <label class="form__add-item-title" for="milk">Молоко</label>
             </div>
 
             <div class="form__add-item-wrapper">
               <input class="form__add-input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+              <span class="form__add-controls"></span>
               <label class="form__add-item-title" for="vitamins">Витамины</label>
             </div>
 
@@ -165,7 +179,7 @@
       <!-- Кнопка -->
 
       <div class="form__footer form__footer-wrapper form__footer-layout">
-        <button class="form__button button" type="submit">Отправить заявку</button>
+        <button class="form__button basic-button" type="submit">Отправить заявку</button>
         <p class="form__legend"><sup>*</sup> — Обязательные поля</p>
       </div>
     </form>
