@@ -1,0 +1,24 @@
+.secondary-button {
+  .button;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  background-color: @secondary-button-color;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @secondary-button-color--hover;
+  }
+
+  &:active {
+    background-color: @secondary-button-color--active;
+    color: fade(#ffffff, 30%);
+  }
+}

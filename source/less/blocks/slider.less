@@ -4,24 +4,7 @@
 
   position: relative;
 
-  z-index: 2;
-
-  &::before {
-    content: "";
-
-    display: block;
-
-    width: 4px;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background-color: @slider-bg-color;
-    border-radius: 2px;
-  }
+  z-index: 3;
 }
 
 .slider__prev {
@@ -34,7 +17,7 @@
   left: 25%;
   transform: translateX(-50%);
 
-  z-index: -1;
+  z-index: 2;
 }
 
 .slider__after {
@@ -43,7 +26,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: -2;
+  z-index: 1;
 }
 
 .slider__button {
@@ -57,33 +40,49 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  background-color: @default-bg-color;
   border: 2px solid @slider-bg-color;
   border-radius: 50%;
   cursor: pointer;
 
-  &::before {
-    content: "";
+  z-index: 3;
 
-    display: block;
-
-    position: absolute;
-    top: 8px;
-    left: -5px;
-
-    border: 10px solid transparent;
-    border-right-color: @slider-bg-color;
+  &:hover {
+    border-color: @slider-hover-color;
   }
 
-  &::after {
-    content: "";
-
-    display: block;
-
-    position: absolute;
-    top: 8px;
-    right: -5px;
-
-    border: 10px solid transparent;
-    border-left-color: @slider-bg-color;
+  &:active {
+    border-color: @slider-active-color;
   }
+
+  &:hover .slider__controls {
+    color: @slider-hover-color;
+  }
+
+  &:active .slider__controls {
+    color: @slider-active-color;
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: @slider-bg-color;
+}
+
+.slider__controls-result {
+  display: block;
+
+  width: 2px;
+  height: 256px;
+
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: @slider-bg-color;
 }

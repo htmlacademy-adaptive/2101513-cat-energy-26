@@ -1,4 +1,4 @@
-.button {
+.basic-button {
   .button;
 
   box-sizing: border-box;
@@ -12,5 +12,13 @@
   cursor: pointer;
   border: none;
   text-transform: uppercase;
-  text-align: center;
+
+  &:hover {
+    background-color: @basic-button-color--hover;
+  }
+
+  &:active {
+    background-color: @basic-button-color--active;
+    color: fade(#ffffff, 30%);
+  }
 }
