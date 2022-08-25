@@ -200,6 +200,11 @@
     border-color: @checkbox-hover-border-color;
   }
 
+  &:focus + .form__program-controls {
+    border-color: @checkbox-hover-border-color;
+    outline: 2px solid @checkbox-hover-border-color;
+  }
+
   &:disabled ~ .form__program-title {
     opacity: 0.3;
   }
@@ -385,6 +390,8 @@
   width: 100%;
 
   border: 1px solid @input-border-color;
+  .secondary-text-style--form;
+  text-transform: uppercase;
 
   &:hover {
     border-color: @input-hover-border-color;
@@ -460,6 +467,11 @@
 .form__add-input {
   &:hover + .form__add-controls {
     border-color: @checkbox-hover-border-color;
+  }
+
+  &:focus + .form__add-controls {
+    border-color: @checkbox-hover-border-color;
+    outline: 2px solid @checkbox-hover-border-color;
   }
 
   &:disabled + .form__add-controls {
