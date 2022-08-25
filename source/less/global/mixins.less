@@ -10,6 +10,76 @@
   color: @basic-text-color;
 }
 
+.basic-text-style--form-legend() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: @secondary-text-color;
+}
+
+.basic-text-style--xs() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: @basic-text-color;
+}
+
+.basic-text-style--s() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: @card-title-text-color;
+}
+
+.basic-text-style--m() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: @basic-text-color;
+}
+
+.basic-text-style--ml() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: @basic-text-color;
+}
+
+.basic-text-style--ml-additional() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @basic-text-color;
+}
+
+.basic-text-style--l() {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: @basic-text-color;
+}
+
 .basic-text-style--tablet() {
   font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
@@ -17,16 +87,108 @@
   font-size: 16px;
   line-height: 24px;
 
+  color: @basic-text-color;
+}
+
+.secondary-text-style() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
   color: @secondary-text-color;
 }
 
-.secondary-text-style (@font-family; @font-style; @font-weight; @font-size; @line-height; @color) {
+.secondary-text-style--form() {
   font-family: @oswald;
-  font-style: @font-style;
-  font-weight: @font-weight;
-  font-size: @font-size;
-  line-height: @line-height;
-  color: @color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @basic-text-color;
+}
+
+.secondary-text-style--form-title() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+
+  color: @secondary-text-color;
+}
+
+.secondary-text-style--input() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @input-form-text-color;
+}
+
+.secondary-text-style--input-darken() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: @secondary-text-color;
+}
+
+
+.header-text-style() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.header-text-style--tablet() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: @secondary-text-color;
+}
+
+.header-text-style--desktop() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: @default-text-color;
+}
+
+.promo-title--tablet() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.promo-title--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: @default-text-color;
 }
 
 .extra-heading() {
@@ -44,22 +206,12 @@
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
-
-  color: @secondary-text-color;
-}
-
-.sub-heading() {
-  font-family: @oswald;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
   line-height: 40px;
 
   color: @secondary-text-color;
 }
 
-.title() {
+.subheading() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
@@ -69,12 +221,122 @@
   color: @secondary-text-color;
 }
 
-.subtitle() {
+.subheading--m() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: @secondary-text-color;
+}
+
+.title() {
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.title--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+
+  color: @basic-text-color;
+}
+
+.title--xs-table() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: @basic-text-color;
+}
+
+.title--s() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: @secondary-text-color;
+}
+
+.title--s-additional() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+
+  color: @additional-text-color;
+}
+
+.title--m() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  color: @secondary-text-color;
+}
+
+.title--m--catalog() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: @card-title-text-color;
+}
+
+.title--m-tablet() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: @secondary-text-color;
+}
+
+.title--l() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+
+  color: @secondary-text-color;
+}
+
+.subtitle() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: @secondary-text-color;
+}
+
+.subtitle--m() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 
   color: @secondary-text-color;
 }
@@ -97,4 +359,34 @@
   line-height: 20px;
 
   color: @default-text-color;
+}
+
+.button--xs() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: @default-text-color;
+}
+
+.button--m() {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: @default-text-color;
+}
+
+.counter-text-style {
+  font-family: @oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 280px;
+  line-height: 280px;
+
+  color: @counter-text-color;
 }

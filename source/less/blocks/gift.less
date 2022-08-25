@@ -1,17 +1,34 @@
 .gift {
-  min-width: 280px;
-  height: 290px;
+  min-height: 289px;
 
-  position: relative;
-
-  margin-top: 35px;
-  padding: 30px 30px 43px;
+  padding: 130px 43px 59px;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
 
+  position: relative;
+
   background-color: @hero-bg-color;
+
+  @media (min-width: @tablet) {
+    min-height: 200px;
+
+    padding: 70px 124px 70px 350px;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 288px;
+    min-width: 245px;
+
+    padding: 160px 42px 42px;
+
+    align-items: flex-end;
+    justify-content: center;
+  }
 
   &::before {
     content: "";
@@ -25,90 +42,63 @@
     top: 0;
     left: 0;
 
-    background: url("../../img/gift/cat-background.jpg") no-repeat;
+    background: url("../img/gift/cat-background.jpg") no-repeat;
 
     z-index: -1;
 
     @media (min-width: 321px) {
       background-size: cover;
-      background-position: 0 60%;
+    }
+
+    @media (min-width: @tablet) {
+      background-position: 0 -300px;
     }
 
     @media (min-width: @desktop) {
-      background-position: 70%;
+      background-position: 0 0;
     }
   }
 
-  @media (min-width: @tablet) {
-    height: 200px;
-
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  @media (min-width: @desktop) {
-    height: 288px;
-    min-width: 244px;
-
-    margin-top: 0;
-
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
-
-.gift__wrapper {
-  font-size: 16px;
-  line-height: 20px;
-  color: @default-text-color;
-
-  text-align: center;
-
-  @media (min-width: @tablet) {
-    text-align: start;
-
-    margin-right: 94px;
-    padding-left: 437px;
-  }
-
-  @media (min-width: @desktop) {
-    text-align: center;
-
-    margin-right: 0;
-    padding-left: 0;
-  }
-}
-
-.gift__title {
-  margin: 0;
-
-  position: relative;
-
-  &::before {
+  &::after {
     content: "";
 
     display: block;
 
-    position: absolute;
-    top: -120px;
-    left: 50%;
-    transform: translate(-50%);
-
-    width: 80px;
+    width: 78px;
     height: 80px;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 
     background: url("../../img/gift/icon_gift.svg") no-repeat;
 
     @media (min-width: @tablet) {
       top: 50%;
-      left: -350px;
-      transform: translate(0, -50%);
+      left: 10%;
     }
 
-    @media (min-width: @desktop) {
-      top: -200%;
+    @media (min-width: @tablet) {
+      top: 20%;
       left: 50%;
-      transform: translateX(-50%);
     }
+  }
+}
+
+.gift__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .basic-text-style--l;
+  color: @default-text-color;
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    text-align: start;
+  }
+
+  @media (min-width: @tablet) {
+    text-align: center;
   }
 }

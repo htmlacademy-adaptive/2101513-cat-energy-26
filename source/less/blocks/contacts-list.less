@@ -1,11 +1,37 @@
 .contacts-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  margin: 0;
+  padding-left: 0;
 
-  justify-content: center;
+  list-style-type: none;
 }
 
-.contacts-list__icon {
+.contacts-list__layout {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.contacts-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 28px;
+  height: 22px;
+
+  padding: 20px 0;
+
   color: @footer-text-color;
+}
+
+.contacts-list__link:hover .contacts-list__icon {
+  color: @basic-button-color;
+}
+
+.contacts-list__link:active .contacts-list__icon {
+  color: @basic-button-color;
+  opacity: 0.3;
 }

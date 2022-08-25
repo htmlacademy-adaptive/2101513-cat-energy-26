@@ -1,93 +1,95 @@
 .main-footer {
+  min-width: 280px;
+
   background-color: @secondary-bg-color;
 }
 
 .main-footer__wrapper {
-  min-width: 280px;
-
   margin: 0 20px;
-  padding: 39px 0 22px;
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
 
   @media (min-width: @tablet) {
-    flex-flow: row wrap;
-    justify-content: space-between;
-
     margin: 0 30px;
-    padding: 56px 0 56px;
   }
 
   @media (min-width: @desktop) {
-    flex-flow: row wrap;
-    justify-content: space-between;
-
     margin: 0 110px;
-    padding: 56px 0 56px;
+  }
+}
+
+.main-footer__layout {
+  display: grid;
+  grid-template-rows: 94px 1fr 78px;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 128px 1fr 163px;
+    grid-template-rows: minmax(147px, auto);
+    grid-auto-rows: minmax(147px, auto);
   }
 }
 
 .main-footer__logo {
-  margin-bottom: 32px;
+  justify-self: center;
+  align-self: center;
 
-  @media (min-width: @tablet) {
-    margin-bottom: 0;
+  cursor: pointer;
+
+  &:hover .main-footer__logo-icon {
+    opacity: 0.8;
   }
+
+  &:active .main-footer__logo-icon {
+    opacity: 0.6;
+  }
+}
+
+.main-footer__logo-icon {
+  color: @basic-bg-color;
 }
 
 .main-footer__contacts {
-  padding: 0;
-  padding-top: 20px;
-  margin: 0;
-  margin-bottom: 21px;
-
-  width: 100%;
-
-  list-style-type: none;
-
-  border-top: 1px solid @footer-border-color;
+  border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    margin: 0;
-    padding: 0;
+    padding-top: 0;
 
-    max-width: 416px;
-
-    border: none;
+    border-top: none;
   }
 }
 
-.main-footer__address-wrapper {
-  width: 100%;
+.main-footer__container {
+  padding-top: 20px;
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
-  border-top: 1px solid @footer-border-color;
-  padding-top: 22px;
+  border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    padding: 0;
+    padding-top: 0;
 
-    max-width: 164px;
-
-    justify-content: end;
-    gap: 22px;
-
-    border: none;
+    border-top: none;
   }
 }
 
 .main-footer__copyright {
-  font-size: 16px;
-  color: inherit;
+  .basic-text-style--ml-additional;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.main-footer__address-icon {
+.main-footer__address-link {
   color: @footer-text-color;
+
+  &:hover .main-footer__address-icon {
+    color: @basic-button-color;
+  }
+
+  &:active .main-footer__address-icon {
+    color: @basic-button-color;
+    opacity: 0.3;
+  }
 }

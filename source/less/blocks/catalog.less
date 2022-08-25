@@ -1,20 +1,24 @@
 .catalog {
-  border-top: 1px solid @catalog-border-color;
-  border-bottom: 1px solid @catalog-border-color;
+  min-width: 280px;
+
+  padding: 26px 0;
+
+  border-top: 1px solid @secondary-border-color;
+  border-bottom: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    border: none;
+    padding-top: 26px;
+    padding-bottom: 0;
+
+    border-top: none;
+    border-bottom: none;
   }
 }
 
-.catalog__wrapper {
-  padding: 27px 0 25px;
-
-  min-width: 280px;
+.catalog__header {
   margin: 0 20px;
 
   @media (min-width: @tablet) {
-    padding: 65px 0 65px;
     margin: 0 30px;
   }
 
@@ -23,11 +27,16 @@
   }
 }
 
-.catalog__header {
+.catalog__title {
+  margin-top: 0;
   margin-bottom: 41px;
+
+  .subheading--m;
 
   @media (min-width: @tablet) {
     margin-bottom: 163px;
+
+    .extra-heading;
   }
 
   @media (min-width: @desktop) {
@@ -35,122 +44,112 @@
   }
 }
 
-.catalog__title {
-  .heading;
+.catalog__layout {
+  display: grid;
 
-  margin-top: 0;
-  margin-bottom: 0;
+  gap: 40px;
 
   @media (min-width: @tablet) {
-    .extra-heading;
-  }
-}
+    grid-template-columns: repeat(2, 1fr);
 
-.catalog__card-layout {
-  @media (min-width: @tablet) {
-    display: grid;
-    gap: 140px 60px;
-
-    grid-template-columns: repeat(2, minmax(324px, auto));
+    gap: 141px 60px;
   }
 
   @media (min-width: @desktop) {
-    gap: 144px 80px;
+    grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns: repeat(4, minmax(245px, auto));
+    gap: 144px 80px;
   }
 }
 
-.catalog__card {
-  padding-top: 24px;
-  margin-bottom: 25px;
+.catalog__wrapper {
+  @media (min-width: @tablet) {
+    margin: 0 30px;
+    margin-bottom: 68px;
+  }
 
-  border-top: 1px solid @catalog-border-color;
+  @media (min-width: @desktop) {
+    margin: 0 110px;
+    margin-bottom: 75px;
+  }
+}
+
+.catalog__optional {
+  text-align: center;
+
+  border-top: 1px solid @card-border-color;
 
   @media (min-width: @tablet) {
     border-top: none;
-
-    padding-top: 0;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop) {
-    min-width: none;
+    border: 2px solid @catalog-border-color--additional;
   }
 }
 
-.catalog__detail-card {
-  max-width: 450px;
+.catalog__optional-container {
+  margin: 0 20px;
 
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-
-  margin: 0 auto;
-  padding-top: 78px;
-
-  border-top: 1px solid @catalog-border-color;
+  padding-top: 70px;
 
   @media (min-width: @tablet) {
-    min-width: 324px;
-
+    margin: 0;
     padding: 161px 36px 38px;
 
-    border-top: none;
-    border: 2px solid @secondary-bg-color;
+    height: 100%;
 
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop) {
-    min-width: 245px;
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
 
-.catalog__detail-card-info {
-  text-align: center;
-}
+.catalog__optional-title {
+  margin-top: 0;
+  margin-bottom: 8px;
 
-.catalog__detail-card-title {
   display: inline-block;
 
-  margin-bottom: 8px;
+  .title--s;
 
   text-transform: uppercase;
 
-  .subtitle;
-  font-size: 16px;
-  color: @additional-text-color;
-}
-
-.catalog__detail-card-subtitle {
-  font-size: 12px;
-  line-height: 16px;
-
-  margin: 0;
-}
-
-.catalog__detail-card-button {
-  margin-top: 21px;
-  padding: 10px 20px 10px;
-
-  width: 100%;
-
-  color: @basic-text-color;
-
-  &--background-sec {
-    background-color: @secondary-bg-color;
-  }
-
   @media (min-width: @tablet) {
-    max-width: 248px;
+    margin-bottom: 23px;
+
+    .title--s-additional;
   }
 }
 
-.catalog__detail-card-break {
+.catalog__optional-break {
   display: none;
 
   @media (min-width: @tablet) {
     display: inline-block;
   }
+}
+
+.catalog__optional-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .basic-text-style--xs;
+
+  @media (min-width: @tablet) {
+    .basic-text-style--ml-additional;
+  }
+}
+
+.catalog__optional-button {
+  margin-top: 21px;
+  padding: 10px 25px;
+
+  min-width: 100%;
+
+  color: @basic-text-color;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+  }
+}
+
+.button--bg-grey {
+  background-color: @secondary-bg-color;
 }

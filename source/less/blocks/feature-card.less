@@ -1,0 +1,147 @@
+.feature-card {
+  padding: 30px 33px 18px 20px;
+
+  position: relative;
+
+  background-color: @secondary-bg-color;
+
+  @media (min-width: @tablet) {
+    padding: 77px 53px 52px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 77px 53px 55px;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    background: url("../img/features/cat_icon.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      width: 200px;
+      height: 211px;
+
+      top: 50%;
+      left: 446px;
+      transform: translateY(-50%);
+
+      background: url("../img/features/cat_icon--tablet.svg") no-repeat;
+    }
+
+    @media (min-width: @desktop) {
+      width: 100px;
+      height: 100px;
+
+      top: 47px;
+      left: 52px;
+      transform: none;
+
+      background: url("../img/features/cat_icon--desktop.svg") no-repeat;
+    }
+  }
+}
+
+.feature-card__container {
+  @media (min-width: @tablet) {
+    max-width: 345px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+  }
+}
+
+.feature-card__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 60px;
+
+  .subheading;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 24px;
+    padding-left: 0;
+
+    .subheading--m;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
+}
+
+.feature-card__subtitle {
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  color: @secondary-text-color;
+}
+
+.feature-card__link {
+  padding-top: 15px;
+
+  display: block;
+
+  position: relative;
+
+  .subtitle;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-top: 1px solid @secondary-border-color;
+
+  &:active {
+    color: fade(@secondary-text-color, 30%);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    margin-top: 52px;
+    padding-top: 0;
+
+    .subtitle--m;
+
+    border-top: none;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 23px;
+
+    .subtitle--m;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 24px;
+    height: 12px;
+
+    position: absolute;
+    top: 50%;
+    left: 100px;
+
+    background: url("../img/features/icon_arrow.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      transform: translateY(-50%);
+      left: 130px;
+    }
+  }
+}
