@@ -395,7 +395,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background: url("../../img/promo/cat.jpg") no-repeat;
+  background: url("../img/promo/cat.jpg") no-repeat;
 }
 @media (min-width: 321px) {
   .promo::after {
@@ -415,7 +415,7 @@
     height: 694px;
     top: -118px;
     left: 55%;
-    background: url("../../img/promo/cat--desktop.jpg") no-repeat;
+    background: url("../img/promo/cat--desktop.jpg") no-repeat;
     background-size: contain;
     background-position: none;
   }
@@ -464,7 +464,7 @@
   top: 147px;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../../img/promo/promo-image.jpg") no-repeat;
+  background: url("../img/promo/promo-image.jpg") no-repeat;
 }
 @media (min-width: 768px) {
   .promo__container::before {
@@ -473,7 +473,7 @@
     top: 263px;
     left: 50%;
     z-index: -1;
-    background: url("../../img/promo/promo-image--tablet.png") no-repeat;
+    background: url("../img/promo/promo-image--tablet.png") no-repeat;
   }
 }
 @media (min-width: 1280px) {
@@ -483,7 +483,7 @@
     top: 70px;
     left: 63%;
     z-index: -1;
-    background: url("../../img/promo/promo-image--desktop.png") no-repeat;
+    background: url("../img/promo/promo-image--desktop.png") no-repeat;
   }
 }
 .promo__title {
@@ -628,7 +628,7 @@
   position: absolute;
   top: 24px;
   left: 22px;
-  background: url("../../img/features/cat_icon.svg") no-repeat;
+  background: url("../img/features/cat_icon.svg") no-repeat;
 }
 @media (min-width: 768px) {
   .feature-card::before {
@@ -637,7 +637,7 @@
     top: 50%;
     left: 446px;
     transform: translateY(-50%);
-    background: url("../../img/features/cat_icon--tablet.svg") no-repeat;
+    background: url("../img/features/cat_icon--tablet.svg") no-repeat;
   }
 }
 @media (min-width: 1280px) {
@@ -647,7 +647,7 @@
     top: 47px;
     left: 52px;
     transform: none;
-    background: url("../../img/features/cat_icon--desktop.svg") no-repeat;
+    background: url("../img/features/cat_icon--desktop.svg") no-repeat;
   }
 }
 @media (min-width: 768px) {
@@ -747,7 +747,7 @@
   position: absolute;
   top: 50%;
   left: 100px;
-  background: url("../../img/features/icon_arrow.svg") no-repeat;
+  background: url("../img/features/icon_arrow.svg") no-repeat;
 }
 @media (min-width: 768px) {
   .feature-card__link::before {
@@ -875,16 +875,16 @@
   }
 }
 .about__item--food::before {
-  background: url("../../img/about/about__item--food.svg") no-repeat;
+  background: url("../img/about/about__item--food.svg") no-repeat;
 }
 .about__item--format::before {
-  background: url("../../img/about/about__item--format.svg") no-repeat;
+  background: url("../img/about/about__item--format.svg") no-repeat;
 }
 .about__item--meal::before {
-  background: url("../../img/about/about__item--meal.svg") no-repeat;
+  background: url("../img/about/about__item--meal.svg") no-repeat;
 }
 .about__item--period::before {
-  background: url("../../img/about/about__item--period.svg") no-repeat;
+  background: url("../img/about/about__item--period.svg") no-repeat;
 }
 .about__info {
   margin-top: 0;
@@ -1930,7 +1930,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../../img/gift/cat-background.jpg") no-repeat;
+  background: url("../img/gift/cat-background.jpg") no-repeat;
   z-index: -1;
 }
 @media (min-width: 321px) {
@@ -2195,6 +2195,10 @@
 .form__program-input:hover + .form__program-controls {
   border-color: #bababa;
 }
+.form__program-input:focus + .form__program-controls {
+  border-color: #bababa;
+  outline: 2px solid #bababa;
+}
 .form__program-input:disabled ~ .form__program-title {
   opacity: 0.3;
 }
@@ -2380,6 +2384,13 @@
   padding: 10px 19px;
   width: 100%;
   border: 1px solid #e7e7e7;
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
 }
 .form__comment-area:hover {
   border-color: #cdcdcd;
@@ -2461,6 +2472,10 @@
 }
 .form__add-input:hover + .form__add-controls {
   border-color: #bababa;
+}
+.form__add-input:focus + .form__add-controls {
+  border-color: #bababa;
+  outline: 2px solid #bababa;
 }
 .form__add-input:disabled + .form__add-controls {
   opacity: 0.3;
