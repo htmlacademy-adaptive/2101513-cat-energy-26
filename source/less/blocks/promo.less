@@ -9,6 +9,10 @@
     padding-top: 0;
   }
 
+  @media (min-width: @desktop) {
+    position: static;
+  }
+
   &::before {
     content: "";
 
@@ -22,7 +26,8 @@
     left: 0;
     z-index: 1;
 
-    background-image: linear-gradient(@hero-bg-color, @hero-bg-color 302px, @default-bg-color 302px, @default-bg-color);
+    background: url("../../img/promo/cat.jpg") no-repeat;
+    background-size: cover;
 
     @media (min-width: @tablet) {
       display: none;
@@ -31,14 +36,14 @@
     @media (min-width: @desktop) {
       display: block;
 
+      width: 50%;
       height: 694px;
-      width: 720px;
 
-      top: -118px;
-      left: 55%;
+      top: 0;
+      left: 50%;
 
-      background-image: none;
-      background-color: @hero-bg-color;
+      background: url("../../img/promo/cat--desktop.jpg");
+      background-size: cover;
     }
   }
 
@@ -53,14 +58,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
 
-    background: url("../img/promo/cat.jpg") no-repeat;
-
-    @media (min-width: 321px) {
-      background-size: cover;
-      background-position: 0 30%;
-    }
+    background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
       display: none;
@@ -69,15 +69,13 @@
     @media (min-width: @desktop) {
       display: block;
 
-      width: 720px;
+      width: 50%;
       height: 694px;
 
-      top: -118px;
-      left: 55%;
+      top: 0;
+      left: 50%;
 
-      background: url("../img/promo/cat--desktop.jpg") no-repeat;
-      background-size: contain;
-      background-position: none;
+      background-color: @hero-bg-color;
     }
   }
 }
