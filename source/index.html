@@ -15,11 +15,17 @@
   <header class="main-header main-header__wrapper main-header__layout">
 
     <div class="main-header__container main-header__container--nojs">
-      <a class="main-header__logo-icon" href="index.html">
+      <a class="main-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1280px)" srcset="./img/main-header/logo--desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/main-header/logo--tablet.svg">
-          <img src="./img/main-header/logo--mobile.svg" alt="Логотип сайта Кэт-Энерджи." width="191" height="37">
+          <img class="main-header__logo-icon" src="./img/main-header/logo.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
+        </picture>
+      </a>
+      <a class="main-header__brand">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/main-header/brand--tablet.svg">
+          <img class="main-header__brand-icon" src="./img/main-header/brand.svg" alt="Кэт Энерджи." width="101" height="18">
         </picture>
       </a>
       <button class="main-header__nav-toggle main-header__nav-toggle--closed main-header__nav-toggle--nojs" type="button">
