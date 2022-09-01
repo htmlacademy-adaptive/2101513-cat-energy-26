@@ -93,6 +93,9 @@
     left: 0;
 
     @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+
       top: 40px;
     }
   }
@@ -117,25 +120,41 @@
 
 .about__item--food {
   &::before {
-    background: url("../img/about/about__item--food.svg") no-repeat;
+    background: url("../img/about/food.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      background: url("../img/about/food--tablet.svg");
+    }
   }
 }
 
 .about__item--format {
   &::before {
-    background: url("../img/about/about__item--format.svg") no-repeat;
+    background: url("../img/about/format.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      background: url("../img/about/format--tablet.svg");
+    }
   }
 }
 
 .about__item--meal {
   &::before {
-    background: url("../img/about/about__item--meal.svg") no-repeat;
+    background: url("../img/about/meal.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      background: url("../img/about/meal--tablet.svg");
+    }
   }
 }
 
 .about__item--period {
   &::before {
-    background: url("../img/about/about__item--period.svg") no-repeat;
+    background: url("../img/about/period.svg") no-repeat;
+
+    @media (min-width: @tablet) {
+      background: url("../img/about/period--tablet.svg");
+    }
   }
 }
 
