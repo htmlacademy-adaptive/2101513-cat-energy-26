@@ -26,8 +26,13 @@
     left: 0;
     z-index: 1;
 
-    background: url("../../img/promo/cat.jpg") no-repeat;
+    background: url("../img/promo/cat.jpg") no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/cat@2x.jpg") no-repeat;
+      background-size: cover;
+    }
 
     @media (min-width: @tablet) {
       display: none;
@@ -44,6 +49,11 @@
 
       background: url("../../img/promo/cat--desktop.jpg");
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/promo/cat@2x--desktop.jpg") no-repeat;
+        background-size: cover;
+      }
     }
   }
 
