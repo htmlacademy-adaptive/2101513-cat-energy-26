@@ -18,35 +18,72 @@
 
     display: block;
 
-    width: 50px;
-    height: 50px;
-
     position: absolute;
     top: 24px;
     left: 22px;
 
-    background: url("../img/features/cat_icon.svg") no-repeat;
+    @media (min-width: @tablet) {
+      top: 50%;
+      left: 60%;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: @desktop) {
+      top: 47px;
+      left: 52px;
+      transform: none;
+    }
+  }
+}
+
+.feature-card--slim {
+  &::before {
+    width: 50px;
+    height: 53px;
+
+    background: url(../img/features/cat-slim.svg) no-repeat;
 
     @media (min-width: @tablet) {
       width: 200px;
       height: 211px;
 
-      top: 50%;
-      left: 446px;
-      transform: translateY(-50%);
-
-      background: url("../img/features/cat_icon--tablet.svg") no-repeat;
+      background: url(../img/features/cat-slim--tablet.svg) no-repeat;
     }
 
     @media (min-width: @desktop) {
       width: 100px;
+      height: 106px;
+
+      background: url(../img/features/cat-slim--desktop.svg) no-repeat;
+    }
+  }
+}
+
+.feature-card--gain {
+  &::before {
+    width: 67px;
+    height: 50px;
+
+    left: 10px;
+
+    background: url(../img/features/cat-gain.svg) no-repeat;
+
+    @media (min-width: @tablet) {
+      width: 268px;
+      height: 200px;
+
+      left: 57%;
+
+      background: url(../img/features/cat-gain--tablet.svg) no-repeat;
+    }
+
+    @media (min-width: @desktop) {
+      width: 134px;
       height: 100px;
 
-      top: 47px;
-      left: 52px;
-      transform: none;
+      left: 30px;
 
-      background: url("../img/features/cat_icon--desktop.svg") no-repeat;
+      background: url(../img/features/cat-gain--desktop.svg) no-repeat;
     }
   }
 }
@@ -64,7 +101,7 @@
 .feature-card__title {
   margin-top: 0;
   margin-bottom: 29px;
-  padding-left: 60px;
+  padding-left: 68px;
 
   .subheading;
   text-transform: uppercase;

@@ -110,7 +110,7 @@
   @media (min-width: @tablet) {
     padding: 68px 89px;
 
-    min-height: 874px;
+    min-height: 884px;
   }
 
   @media (min-width: @desktop) {
@@ -118,45 +118,8 @@
 
     min-height: 576px;
   }
-
-  &::before {
-    content: "";
-
-    display: block;
-
-    width: 280px;
-    height: 270px;
-
-    position: absolute;
-    top: 147px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background: url("../img/promo/promo-image.jpg") no-repeat;
-
-    @media (min-width: @tablet) {
-      width: 709px;
-      height: 609px;
-
-      top: 263px;
-      left: 50%;
-      z-index: -1;
-
-      background: url("../img/promo/promo-image--tablet.png") no-repeat;
-    }
-
-    @media (min-width: @desktop) {
-      width: 522px;
-      height: 499px;
-
-      top: 70px;
-      left: 63%;
-      z-index: -1;
-
-      background: url("../img/promo/promo-image--desktop.png") no-repeat;
-    }
-  }
 }
+
 
 .promo__title {
   .subheading--m;
@@ -195,6 +158,37 @@
   @media (min-width: @tablet) {
     .promo-title--tablet;
     text-align: start;
+  }
+}
+
+.promo__product {
+  position: absolute;
+
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  @media (min-width: @tablet) {
+    max-width: none;
+    width: 709px;
+    height: 609px;
+
+    top: 275px;
+
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop) {
+    width: 552px;
+    height: 499px;
+
+    top: 32px;
+    left: 430px;
+    transform: none;
+
+    z-index: 2;
   }
 }
 
