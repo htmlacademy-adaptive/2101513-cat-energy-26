@@ -127,7 +127,7 @@
           <dl class="widget__info">
             <div class="widget__info-item">
               <dt class="widget__info-term">Снижение<br class="widget__break"> веса</dt>
-              <dd class="widget__info-def">5 КГ</dd>
+              <dd class="widget__info-def widget__info-def--padding">5 КГ</dd>
             </div>
             <div class="widget__info-item">
               <dt class="widget__info-term">Затрачено<br class="widget__break"> времени</dt>
@@ -139,17 +139,27 @@
 
         <div class="widget__slider-container slider">
           <div class="slider__prev">
-            <img class="slider__prev-image" src="./img/slider/prev.png" alt="Пухлый кот до преображения." width="280" height="256">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/slider/prev--tablet.png 1x, ./img/slider/prev@2x--tablet.png 2x">
+              <img class="slider__image slider__prev-image" src="./img/slider/prev.png" srcset="./img/slider/prev@2x.png" alt="Пухлый кот до преображения." width="280" height="256">
+            </picture>
           </div>
           <div class="slider__after">
-            <img class="slider__after-image" src="./img/slider/after.png" alt="Стройный кот после преображения." width="280" height="256">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/slider/after--tablet.png 1x, ./img/slider/after@2x--tablet.png 2x">
+              <img class="slider__image slider__after-image" src="./img/slider/after.png" srcset="./img/slider/after@2x.png" alt="Стройный кот после преображения." width="280" height="256">
+            </picture>
           </div>
-          <button class="slider__button" type="button">
-            <svg class="slider__controls" width="24" height="18" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0L0 9L8 18V0Z" />
-              <path d="M24 9L16 0V18L24 9Z" />
-            </svg>
-          </button>
+          <div class="slider__control-container">
+            <button class="slider__button" type="button">
+              <svg class="slider__button-controls" width="24" height="18" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L0 9L8 18V0Z" />
+                <path d="M24 9L16 0V18L24 9Z" />
+              </svg>
+            </button>
+            <span class="slider__control">
+            </span>
+          </div>
         </div>
 
       </div>
