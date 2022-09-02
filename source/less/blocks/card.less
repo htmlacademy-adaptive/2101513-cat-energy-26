@@ -43,16 +43,24 @@
   }
 }
 
-.card__image {
+.card__image-container {
+  margin: 0;
+
   align-self: center;
   justify-self: center;
 
   @media (min-width: @tablet) {
     position: absolute;
 
-    top: 10%;
+    top: -10%;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+.card__image-container--position {
+  @media (min-width: @tablet) {
+    top: -17%;
   }
 }
 

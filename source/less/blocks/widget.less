@@ -100,7 +100,6 @@
 
 .widget__info {
   margin: 0;
-  padding: 0 33px;
 
   display: flex;
   justify-content: space-between;
@@ -127,13 +126,24 @@
 }
 
 .widget__info-term {
+  width: calc(100% - 18px);
+
+  margin-top: -15px;
+
+  justify-self: center;
   order: 2;
 
   .title--xs;
   text-transform: lowercase;
+  background-color: @additional-bg-color;
 
   @media (min-width: @tablet) {
     .title--xs-table;
+    background-color: @default-bg-color;
+  }
+
+  @media (min-width: @desktop) {
+    background-color: @additional-bg-color;
   }
 }
 
@@ -145,11 +155,19 @@
 
 .widget__info-def {
   margin-left: 0;
+  padding: 14px 20px;
 
   .title--m;
 
+  border: 1px solid @additional-border-color;
+  border-radius: 3px;
+
   @media (min-width: @tablet) {
     .title--l;
+  }
+
+  &--padding {
+    padding: 14px 42px;
   }
 }
 
@@ -190,15 +208,5 @@
 }
 
 .widget__slider-container {
-  margin: 20px auto 0;
-
-  @media (min-width: @tablet) {
-    margin: 100px auto 0;
-  }
-
-  @media (min-width: @desktop) {
-    margin-top: 0;
-
-    grid-column: 2 / -1;
-  }
+  margin: 0 auto;
 }

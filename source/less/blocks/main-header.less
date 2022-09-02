@@ -46,16 +46,28 @@
   justify-content: space-evenly;
 }
 
-.main-header__logo-icon {
-  display: block;
-
+.main-header__logo {
   padding: 10px 0;
+
+  @media (min-width: @tablet) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 14px;
+  }
 }
 
-.main-header__logo {
-  display: block;
+.main-header__logo-icon {
+  @media (min-width: @tablet) {
+    width: 60px;
+    height: 49px;
+  }
 
-  padding: 20px 0;
+  @media (min-width: @desktop) {
+    width: 70px;
+    height: 59px;
+  }
 }
 
 .main-header__nav-toggle {
