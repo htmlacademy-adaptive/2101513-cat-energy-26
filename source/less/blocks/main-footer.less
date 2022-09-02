@@ -28,6 +28,9 @@
 }
 
 .main-footer__logo {
+  padding-top: 30px;
+  padding-bottom: 20px;
+
   justify-self: center;
   align-self: center;
 
@@ -47,7 +50,7 @@
 }
 
 .main-footer__contacts {
-  padding: 20px 0;
+  padding: 10px 0;
 
   border-top: 1px solid @secondary-border-color;
 
@@ -59,8 +62,6 @@
 }
 
 .main-footer__container {
-  padding-top: 20px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,13 +69,14 @@
   border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    padding-top: 0;
-
     border-top: none;
   }
 }
 
 .main-footer__copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   .basic-text-style--ml-additional;
   text-decoration: none;
 

@@ -1,7 +1,7 @@
 .widget {
   min-width: 280px;
 
-  padding: 25px 0 40px;
+  padding: 23px 0 40px;
 
   background-color: @additional-bg-color;
 
@@ -53,7 +53,7 @@
   gap: 20px;
 
   @media (min-width: @tablet) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
     gap: 0;
   }
@@ -104,6 +104,11 @@
   display: flex;
   justify-content: space-between;
 
+  @media (min-width: @tablet) {
+    justify-content: flex-start;
+    gap: 42px;
+  }
+
   @media (min-width: @desktop) {
     margin-bottom: 55px;
   }
@@ -138,7 +143,8 @@
   background-color: @additional-bg-color;
 
   @media (min-width: @tablet) {
-    .title--xs-table;
+    .basic-text-style--s;
+    color: @basic-text-color;
     background-color: @default-bg-color;
   }
 
@@ -155,7 +161,7 @@
 
 .widget__info-def {
   margin-left: 0;
-  padding: 14px 20px;
+  padding: 13px 20px;
 
   .title--m;
 
@@ -163,11 +169,15 @@
   border-radius: 3px;
 
   @media (min-width: @tablet) {
-    .title--l;
+    padding: 13px 30px;
   }
 
   &--padding {
     padding: 14px 42px;
+
+    @media (min-width: @tablet) {
+      padding: 14px 56px;
+    }
   }
 }
 

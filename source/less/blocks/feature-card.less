@@ -6,6 +6,7 @@
   background-color: @secondary-bg-color;
 
   @media (min-width: @tablet) {
+    min-height: 372px;
     padding: 77px 53px 52px;
   }
 
@@ -19,8 +20,6 @@
     display: block;
 
     position: absolute;
-    top: 24px;
-    left: 22px;
 
     @media (min-width: @tablet) {
       top: 50%;
@@ -41,20 +40,26 @@
     width: 50px;
     height: 53px;
 
-    background: url(../img/features/cat-slim.svg) no-repeat;
+    top: 21px;
+    left: 22px;
+
+    background: url("../img/features/cat-slim.svg") no-repeat;
 
     @media (min-width: @tablet) {
       width: 200px;
       height: 211px;
 
-      background: url(../img/features/cat-slim--tablet.svg) no-repeat;
+      top: 50%;
+      left: 63%;
+
+      background: url("../img/features/cat-slim--tablet.svg") no-repeat;
     }
 
     @media (min-width: @desktop) {
       width: 100px;
       height: 106px;
 
-      background: url(../img/features/cat-slim--desktop.svg) no-repeat;
+      background: url("../img/features/cat-slim--desktop.svg") no-repeat;
     }
   }
 }
@@ -64,17 +69,19 @@
     width: 67px;
     height: 50px;
 
-    left: 10px;
+    top: 25px;
+    left: 13px;
 
-    background: url(../img/features/cat-gain.svg) no-repeat;
+    background: url("../img/features/cat-gain.svg") no-repeat;
 
     @media (min-width: @tablet) {
       width: 268px;
       height: 200px;
 
-      left: 57%;
+      top: 51%;
+      left: 58%;
 
-      background: url(../img/features/cat-gain--tablet.svg) no-repeat;
+      background: url("../img/features/cat-gain--tablet.svg") no-repeat;
     }
 
     @media (min-width: @desktop) {
@@ -83,14 +90,14 @@
 
       left: 30px;
 
-      background: url(../img/features/cat-gain--desktop.svg) no-repeat;
+      background: url("../img/features/cat-gain--desktop.svg") no-repeat;
     }
   }
 }
 
 .feature-card__container {
   @media (min-width: @tablet) {
-    max-width: 345px;
+    max-width: 340px;
   }
 
   @media (min-width: @desktop) {
@@ -101,7 +108,7 @@
 .feature-card__title {
   margin-top: 0;
   margin-bottom: 29px;
-  padding-left: 68px;
+  padding-left: 71px;
 
   .subheading;
   text-transform: uppercase;
@@ -128,16 +135,11 @@
 
 .feature-card__link-container {
   border-top: 2px solid @secondary-border-color;
-  padding-top: 23px;
+  padding-top: 17px;
 
   @media (min-width: @tablet) {
     border-top: none;
     padding-top: 0;
-    margin-top: 48px;
-  }
-
-  @media (min-width: @desktop) {
-    margin-top: 27px;
   }
 }
 
@@ -158,6 +160,12 @@
     opacity: 0.3;
   }
 
+  @media (min-width: @tablet) {
+    margin-top: 29px;
+
+    .subtitle--m;
+  }
+
   &::before {
     content: "";
 
@@ -168,13 +176,13 @@
 
     position: absolute;
     top: 50%;
-    right: -33px;
+    right: -40px;
     transform: translateY(-50%);
 
     background: url("../img/features/icon_arrow.svg") no-repeat;
 
     @media (min-width: @tablet) {
-      right: -41px;
+      right: -49px;
     }
   }
 }
