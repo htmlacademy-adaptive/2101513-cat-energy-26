@@ -36,6 +36,12 @@
 
   cursor: pointer;
 
+  display: block;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 15px;
+  }
+
   &:hover .main-footer__logo-icon {
     opacity: 0.8;
   }
@@ -71,6 +77,10 @@
   @media (min-width: @tablet) {
     border-top: none;
   }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 12px;
+  }
 }
 
 .main-footer__copyright {
@@ -83,9 +93,22 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet) {
+    padding: 40px 0;
+  }
 }
 
 .main-footer__address-link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 9px;
+
+  @media (min-width: @tablet) {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  }
+
   color: @footer-text-color;
 
   &:hover .main-footer__address-icon {

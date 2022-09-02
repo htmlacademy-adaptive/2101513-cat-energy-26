@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 77px 53px 55px;
+    min-height: 374px;
   }
 
   &::before {
@@ -59,6 +59,9 @@
       width: 100px;
       height: 106px;
 
+      top: 41px;
+      left: 52px;
+
       background: url("../img/features/cat-slim--desktop.svg") no-repeat;
     }
   }
@@ -88,7 +91,8 @@
       width: 134px;
       height: 100px;
 
-      left: 30px;
+      top: 47px;
+      left: 33px;
 
       background: url("../img/features/cat-gain--desktop.svg") no-repeat;
     }
@@ -166,6 +170,10 @@
     .subtitle--m;
   }
 
+  @media (min-width: @desktop) {
+    margin-top: 4px;
+  }
+
   &::before {
     content: "";
 
@@ -183,6 +191,10 @@
 
     @media (min-width: @tablet) {
       right: -49px;
+    }
+
+    @media (min-width: @desktop) {
+      right: -52px;
     }
   }
 }
