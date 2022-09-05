@@ -1,7 +1,7 @@
 .gift {
-  min-height: 289px;
+  min-height: 290px;
 
-  padding: 130px 43px 59px;
+  padding: 130px 40px 42px;
 
   display: flex;
   align-items: flex-end;
@@ -14,7 +14,7 @@
   @media (min-width: @tablet) {
     min-height: 200px;
 
-    padding: 70px 124px 70px 350px;
+    padding: 69px 124px 68px 180px;
 
     align-items: center;
     justify-content: flex-end;
@@ -60,7 +60,7 @@
     }
 
     @media (min-width: @desktop) {
-      background-position: 0 0;
+      background-position: -34px 0;
     }
   }
 
@@ -80,13 +80,14 @@
     background: url("../../img/gift/icon_gift.svg") no-repeat;
 
     @media (min-width: @tablet) {
-      top: 50%;
-      left: 10%;
+      top: 48%;
+      left: 11%;
+      transform: translate(0, -50%);
     }
 
-    @media (min-width: @tablet) {
-      top: 20%;
-      left: 50%;
+    @media (min-width: @desktop) {
+      top: 33%;
+      left: 34%;
     }
   }
 }
@@ -103,7 +104,7 @@
     text-align: start;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     text-align: center;
   }
 }
