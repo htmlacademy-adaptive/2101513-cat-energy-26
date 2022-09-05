@@ -1,5 +1,5 @@
 .feature-card {
-  padding: 30px 33px 18px 20px;
+  padding: 30px 25px 18px 20px;
 
   position: relative;
 
@@ -143,7 +143,7 @@
 
 .feature-card__link-container {
   border-top: 2px solid @secondary-border-color;
-  padding-top: 17px;
+  padding-top: 18px;
 
   @media (min-width: @tablet) {
     border-top: none;
@@ -159,6 +159,10 @@
   .subtitle;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover .feature-card__link-icon{
+    transform: scaleX(1.4);
+  }
 
   &:active {
     color: fade(@secondary-text-color, 30%);
@@ -177,21 +181,30 @@
   @media (min-width: @desktop) {
     margin-top: 4px;
   }
+}
 
-  &::before {
-    content: "";
+.feature-card__link-icon {
+  position: absolute;
 
-    display: block;
+  top: 5%;
+  right: -51%;
 
-    width: 24px;
-    height: 12px;
+  transform: scaleX(1);
+  transform-origin: center left;
+  transition: transform 0.5s;
 
-    position: absolute;
-    top: 50%;
+  @media (min-width: @tablet) {
+    top: 30%;
+    right: -50px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 30%;
+    right: -51px;
+  }
+
+  &--position {
     right: -40px;
-    transform: translateY(-50%);
-
-    background: url("../img/features/icon_arrow.svg") no-repeat;
 
     @media (min-width: @tablet) {
       right: -49px;

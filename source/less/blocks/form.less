@@ -78,7 +78,7 @@
 .form__pet-container {
   display: grid;
 
-  gap: 24px 0;
+  gap: 22px 0;
 
   @media (min-width: @tablet) {
     margin-bottom: 75px;
@@ -150,18 +150,21 @@
 }
 
 .form__pet-input {
-  padding: 13px 14px;
+  padding: 0 15px;
+  padding-top: 11px;
+  padding-bottom: 8px;
 
   flex: 1;
 
-  border: 1px solid @input-border-color;
-
   min-width: 172px;
+
+  border: 1px solid @input-border-color;
+  .secondary-text-style--form;
 
   @media (min-width: @tablet) {
     padding: 0 18px;
-    padding-top: 18px;
-    padding-bottom: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 
   &::placeholder {
@@ -292,8 +295,8 @@
 // Персональные данные
 
 .form__personal-date {
-  padding: 26px 0 24px;
-  padding-bottom: 22px;
+  padding-top: 26px;
+  padding-bottom: 24px;
 
   border-top: 1px solid @secondary-border-color;
 
@@ -316,7 +319,7 @@
     background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
-      top: 22px;
+      top: 21px;
     }
   }
 
@@ -427,15 +430,17 @@
 }
 
 .form__personal-input {
-  padding: 15px 40px 13px 15px;
+  padding: 10px 40px 9px 15px;
 
   flex: 1;
 
-  border: 1px solid @input-border-color;
   min-width: 204px;
 
+  border: 1px solid @input-border-color;
+  .secondary-text-style--form;
+
   @media (min-width: @tablet) {
-    padding: 16px 45px 17px 20px;
+    padding: 12px 45px 14px 20px;
   }
 
   &::placeholder {
@@ -495,18 +500,18 @@
     background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
-      top: 22px;
+      top: 21px;
     }
   }
 }
 
 .form__comment-wrapper {
   margin: 0 20px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet) {
     margin: 0;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop) {
@@ -579,7 +584,7 @@
     height: 2px;
 
     position: absolute;
-    top: 16px;
+    top: 15px;
     left: -50%;
 
     z-index: -1;
@@ -587,7 +592,7 @@
     background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
-      top: 22px;
+      top: 23px;
     }
   }
 }
@@ -626,7 +631,7 @@
 .form__additional-layout {
   display: grid;
 
-  gap: 23px;
+  gap: 22px;
 
   @media (min-width: @tablet) {
     grid-template-columns: 1fr 1fr;
@@ -723,7 +728,7 @@
 
 .form__footer-wrapper {
   margin: 0 20px;
-  margin-top: 38px;
+  margin-top: 39px;
 
   @media (min-width: @tablet) {
     margin: 0;
