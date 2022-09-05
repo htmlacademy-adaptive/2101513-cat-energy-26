@@ -1,8 +1,8 @@
 // Форма
 
 .form {
-  padding-top: 27px;
-  padding-bottom: 32px;
+  padding-top: 25px;
+  padding-bottom: 31px;
 
   border-top: 1px solid @secondary-border-color;
 
@@ -150,9 +150,7 @@
 }
 
 .form__pet-input {
-  padding: 0 14px;
-  padding-top: 16px;
-  padding-bottom: 11px;
+  padding: 13px 14px;
 
   flex: 1;
 
@@ -192,7 +190,7 @@
 // Программа
 
 .form__program {
-  padding-top: 29px;
+  padding-top: 28px;
   padding-bottom: 22px;
 
   border-top: 1px solid @secondary-border-color;
@@ -213,7 +211,7 @@
 .form__program-layout {
   display: grid;
 
-  gap: 22px;
+  gap: 23px;
 }
 
 .form__program-item-wrapper {
@@ -244,7 +242,8 @@
 
   &:focus + .form__program-controls {
     border-color: @checkbox-hover-border-color;
-    outline: 2px solid @checkbox-hover-border-color;
+    outline: 2px dashed @checkbox-hover-border-color;
+    outline-offset: 5px;
   }
 
   &:disabled ~ .form__program-title {
@@ -258,7 +257,7 @@
 
   position: absolute;
 
-  top: 40%;
+  top: 45%;
   left: 0;
   transform: translateY(-50%);
 
@@ -294,6 +293,7 @@
 
 .form__personal-date {
   padding: 26px 0 24px;
+  padding-bottom: 22px;
 
   border-top: 1px solid @secondary-border-color;
 
@@ -406,7 +406,11 @@
   }
 
   &--gap {
-    margin-right: 15px;
+    margin-right: 9px;
+
+    @media (min-width: @tablet) {
+      margin-right: 14px;
+    }
   }
 }
 
@@ -423,7 +427,7 @@
 }
 
 .form__personal-input {
-  padding: 17px 40px 11px 15px;
+  padding: 15px 40px 13px 15px;
 
   flex: 1;
 
@@ -431,7 +435,7 @@
   min-width: 204px;
 
   @media (min-width: @tablet) {
-    padding: 18px 45px 17px 20px;
+    padding: 16px 45px 17px 20px;
   }
 
   &::placeholder {
@@ -451,8 +455,20 @@
     border-color: @input-focus-border-color;
   }
 
-  &--error {
+  &:focus + .form__personal-icon,
+  &:focus + .form__personal-icon > line,
+  &:focus + .form__personal-icon > path {
+    color: @checkbox-controls-color;
+    stroke: @checkbox-controls-color;
+  }
+
+  &--error,
+  &--error + .form__personal-icon,
+  &--error + .form__personal-icon > line,
+  &--error + .form__personal-icon > path {
     border-color: @input-error-border-color;
+    color: @input-error-border-color;
+    stroke: @input-error-border-color;
   }
 }
 
@@ -486,11 +502,11 @@
 
 .form__comment-wrapper {
   margin: 0 20px;
-  margin-bottom: 17px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet) {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: @desktop) {
@@ -524,7 +540,7 @@
 .form__comment-area {
   margin: 0;
   padding: 10px 14px;
-  padding-bottom: 14px;
+  padding-bottom: 48px;
 
   width: 100%;
 
@@ -654,7 +670,8 @@
 
   &:focus + .form__add-controls {
     border-color: @checkbox-hover-border-color;
-    outline: 2px solid @checkbox-hover-border-color;
+    outline: 2px dashed @checkbox-hover-border-color;
+    outline-offset: 5px;
   }
 
   &:disabled + .form__add-controls {
