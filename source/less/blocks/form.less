@@ -1,19 +1,22 @@
 // Форма
 
 .form {
-  padding-top: 27px;
-  padding-bottom: 32px;
+  padding-top: 25px;
+  padding-bottom: 31px;
 
   border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    padding: 72px 39px;
+    padding: 65px 40px;
+    padding-bottom: 72px;
+    padding-right: 37px;
 
     border-top: none;
   }
 
   @media (min-width: @desktop) {
-    padding: 82px 0;
+    padding: 78px 0;
+    padding-bottom: 82px;
   }
 }
 
@@ -51,13 +54,13 @@
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
   }
 }
 
 .form__subtitle {
   margin-top: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 
   .secondary-text-style;
   text-transform: uppercase;
@@ -75,16 +78,16 @@
 .form__pet-container {
   display: grid;
 
-  gap: 24px 0;
+  gap: 22px 0;
 
   @media (min-width: @tablet) {
-    margin-bottom: 71px;
+    margin-bottom: 75px;
 
     gap: 72px 0;
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
 
     grid-template-columns: 1fr 1fr;
 
@@ -102,8 +105,9 @@
 
 .form__pet-date-layout {
   display: grid;
+  grid-template-columns: minmax(280px, auto);
 
-  gap: 14px 0;
+  gap: 15px 0;
 
   @media (min-width: @tablet) {
     gap: 20px 0;
@@ -118,26 +122,58 @@
 }
 
 .form__pet-title {
-  margin-right: 6px;
+  margin-right: 13px;
 
   .secondary-text-style--form;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
+    margin-right: 17px;
     .form-text-style;
+  }
+
+  &--gap-weight {
+    margin-right: 16px;
+
+    @media (min-width: @tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  &--gap-age {
+    margin-right: 15px;
+
+    @media (min-width: @tablet) {
+      margin-right: 18px;
+    }
   }
 }
 
 .form__pet-input {
-  padding: 10px 19px;
+  padding: 0 15px;
+  padding-top: 11px;
+  padding-bottom: 8px;
 
   flex: 1;
 
+  min-width: 172px;
+
   border: 1px solid @input-border-color;
+  .secondary-text-style--form;
+
+  @media (min-width: @tablet) {
+    padding: 0 18px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
 
   &::placeholder {
     .secondary-text-style--form;
     text-transform: uppercase;
+
+    @media (min-width: @tablet) {
+      .form-text-style;
+    }
   }
 
   &:hover {
@@ -157,12 +193,14 @@
 // Программа
 
 .form__program {
-  padding: 22px 0;
+  padding-top: 28px;
+  padding-bottom: 22px;
 
   border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
     padding: 30px 0;
+    padding-bottom: 27px;
 
     border-top: none;
     border: 1px solid @secondary-border-color--additional;
@@ -176,7 +214,7 @@
 .form__program-layout {
   display: grid;
 
-  gap: 25px;
+  gap: 23px;
 }
 
 .form__program-item-wrapper {
@@ -188,6 +226,11 @@
 
   .secondary-text-style--input;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    padding-left: 68px;
+    .form-text-style;
+  }
 }
 
 .form__program-input {
@@ -202,7 +245,8 @@
 
   &:focus + .form__program-controls {
     border-color: @checkbox-hover-border-color;
-    outline: 2px solid @checkbox-hover-border-color;
+    outline: 2px dashed @checkbox-hover-border-color;
+    outline-offset: 5px;
   }
 
   &:disabled ~ .form__program-title {
@@ -216,7 +260,7 @@
 
   position: absolute;
 
-  top: 50%;
+  top: 45%;
   left: 0;
   transform: translateY(-50%);
 
@@ -237,15 +281,47 @@
     background-color: transparent;
     border-radius: 50%;
   }
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+
+    top: 44%;
+    left: 8px;
+  }
 }
 
 
 // Персональные данные
 
 .form__personal-date {
-  padding: 26px 0 24px;
+  padding-top: 26px;
+  padding-bottom: 24px;
 
   border-top: 1px solid @secondary-border-color;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 4000px;
+    height: 2px;
+
+    position: absolute;
+    top: 42px;
+    left: -50%;
+
+    z-index: -1;
+
+    background-color: @hero-bg-color;
+
+    @media (min-width: @tablet) {
+      top: 21px;
+    }
+  }
 
   @media (min-width: @tablet) {
     padding: 0;
@@ -263,7 +339,7 @@
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 69px;
+    margin-bottom: 66px;
   }
 }
 
@@ -271,10 +347,19 @@
   margin-top: 0;
   margin-bottom: 35px;
 
+  max-width: 231px;
+  padding-left: 30px;
+  margin-left: -30px;
+
+  background-color: @default-bg-color;
   .secondary-text-style--form-title;
 
   @media (min-width: @tablet) {
     margin-bottom: 76px;
+    margin-left: -40px;
+    padding-left: 38px;
+
+    max-width: 593px;
 
     .subheading--m;
   }
@@ -288,6 +373,7 @@
 
 .form__personal-layout {
   display: grid;
+  grid-template-columns: minmax(280px, auto);
 
   gap: 14px 0;
 
@@ -311,33 +397,59 @@
 }
 
 .form__personal-item-title {
-  margin-right: 9px;
+  margin-right: 10px;
 
   .secondary-text-style--form;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
+    margin-right: 20px;
+
     .form-text-style;
+  }
+
+  &--gap {
+    margin-right: 9px;
+
+    @media (min-width: @tablet) {
+      margin-right: 14px;
+    }
   }
 }
 
 .form__personal-icon {
   position: absolute;
   top: 50%;
-  right: 13px;
+  right: 14px;
   transform: translateY(-50%);
+
+  @media (min-width: @desktop) {
+    top: 49%;
+    margin-right: 4px;
+  }
 }
 
 .form__personal-input {
-  padding: 10px 40px 10px 19px;
+  padding: 10px 40px 9px 15px;
 
   flex: 1;
 
+  min-width: 204px;
+
   border: 1px solid @input-border-color;
+  .secondary-text-style--form;
+
+  @media (min-width: @tablet) {
+    padding: 12px 45px 14px 20px;
+  }
 
   &::placeholder {
     .secondary-text-style--form;
     text-transform: uppercase;
+
+    @media (min-width: @tablet) {
+      .form-text-style;
+    }
   }
 
   &:hover {
@@ -348,25 +460,62 @@
     border-color: @input-focus-border-color;
   }
 
-  &--error {
+  &:focus + .form__personal-icon,
+  &:focus + .form__personal-icon > line,
+  &:focus + .form__personal-icon > path {
+    color: @checkbox-controls-color;
+    stroke: @checkbox-controls-color;
+  }
+
+  &--error,
+  &--error + .form__personal-icon,
+  &--error + .form__personal-icon > line,
+  &--error + .form__personal-icon > path {
     border-color: @input-error-border-color;
+    color: @input-error-border-color;
+    stroke: @input-error-border-color;
   }
 }
 
 
 // Комментарии
 
+.form__comment {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 4000px;
+    height: 2px;
+
+    position: absolute;
+    top: 15px;
+    left: -50%;
+
+    z-index: -1;
+
+    background-color: @hero-bg-color;
+
+    @media (min-width: @tablet) {
+      top: 21px;
+    }
+  }
+}
+
 .form__comment-wrapper {
   margin: 0 20px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet) {
     margin: 0;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 67px;
+    margin-bottom: 63px;
   }
 }
 
@@ -374,10 +523,20 @@
   margin-top: 0;
   margin-bottom: 37px;
 
+  max-width: 173px;
+  padding-left: 30px;
+  margin-left: -30px;
+
+  background-color: @default-bg-color;
+
   .secondary-text-style--form-title;
 
   @media (min-width: @tablet) {
     margin-bottom: 76px;
+    padding-left: 39px;
+    margin-left: -40px;
+
+    max-width: 259px;
 
     .subheading--m;
   }
@@ -385,7 +544,8 @@
 
 .form__comment-area {
   margin: 0;
-  padding: 10px 19px;
+  padding: 10px 14px;
+  padding-bottom: 48px;
 
   width: 100%;
 
@@ -400,10 +560,42 @@
   &:focus {
     border-color: @input-focus-border-color;
   }
+
+  @media (min-width: @tablet) {
+    padding: 10px 19px;
+    padding-bottom: 12px;
+
+    .form-text-style;
+  }
 }
 
 
 // Дополнительно
+
+.form__additional {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 4000px;
+    height: 2px;
+
+    position: absolute;
+    top: 15px;
+    left: -50%;
+
+    z-index: -1;
+
+    background-color: @hero-bg-color;
+
+    @media (min-width: @tablet) {
+      top: 23px;
+    }
+  }
+}
 
 .form__additional-wrapper {
   margin: 0 20px;
@@ -415,12 +607,22 @@
 
 .form__additional-title {
   margin-top: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
+
+  max-width: 194px;
+  padding-left: 30px;
+  margin-left: -30px;
+
+  background-color: @default-bg-color;
 
   .secondary-text-style--form-title;
 
   @media (min-width: @tablet) {
-    margin-bottom: 62px;
+    margin-bottom: 63px;
+    padding-left: 39px;
+    margin-left: -40px;
+
+    max-width: 292px;
 
     .subheading--m;
   }
@@ -429,29 +631,31 @@
 .form__additional-layout {
   display: grid;
 
-  gap: 25px;
+  gap: 22px;
 
   @media (min-width: @tablet) {
     grid-template-columns: 1fr 1fr;
 
-    gap: 42px 124px;
+    gap: 42px 57px;
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 42px 105px;
+    gap: 42px 80px;
   }
 }
 
 .form__add-item-title {
-  padding-left: 42px;
+  padding-left: 46px;
 
   .secondary-text-style--input-darken;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
     .subtitle--m;
+
+    padding-left: 59px;
   }
 }
 
@@ -471,7 +675,8 @@
 
   &:focus + .form__add-controls {
     border-color: @checkbox-hover-border-color;
-    outline: 2px solid @checkbox-hover-border-color;
+    outline: 2px dashed @checkbox-hover-border-color;
+    outline-offset: 5px;
   }
 
   &:disabled + .form__add-controls {
@@ -509,6 +714,13 @@
     background: url("../../img/form/checked.svg") no-repeat center;
     opacity: 0;
   }
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+
+    top: 49%;
+  }
 }
 
 
@@ -516,38 +728,44 @@
 
 .form__footer-wrapper {
   margin: 0 20px;
-  margin-top: 41px;
+  margin-top: 39px;
 
   @media (min-width: @tablet) {
     margin: 0;
 
-    margin-top: 54px;
+    margin-top: 58px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 65px;
   }
 }
 
 .form__footer-layout {
   display: grid;
 
-  gap: 21px;
+  gap: 17px;
 
   @media (min-width: @tablet) {
     grid-template-columns: 1fr 1fr;
 
-    gap: 30px 60px;
+    gap: 30px 65px;
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: minmax(568px, auto) 1fr;
 
-    gap: 30px 81px;
+    gap: 30px 85px;
   }
 }
 
 .form__button {
-  padding: 7px 25px;
+  padding: 10px 25px;
 
   @media (min-width: @tablet) {
-    padding: 13px 25px;
+    padding: 16px 25px;
+
+    font-size: 20px;
   }
 }
 
@@ -562,5 +780,10 @@
   @media (min-width: @tablet) {
     justify-self: flex-start;
     align-self: center;
+
+    font-size: 16px;
+
+    margin-top: -6px;
+    margin-left: -3px;
   }
 }

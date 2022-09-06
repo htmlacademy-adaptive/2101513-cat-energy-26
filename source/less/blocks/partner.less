@@ -14,12 +14,12 @@
 
   @media (min-width: @tablet) {
     margin: 0 30px;
-    padding: 56px 56px;
+    padding: 59px 40px;
   }
 
   @media (min-width: @desktop) {
     margin: 0 110px;
-    padding: 60px 80px;
+    padding: 59px 80px;
   }
 }
 
@@ -28,15 +28,19 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     min-width: 565px;
 
     position: absolute;
 
-    top: 95px;
+    top: 87px;
     left: 0;
 
     background-color: @default-bg-color;
+  }
+
+  @media (min-width: @desktop) {
+    top: 95px;
   }
 }
 
@@ -62,6 +66,7 @@
 
   @media (min-width: @desktop) {
     text-align: start;
+    margin-top: -5px;
   }
 }
 

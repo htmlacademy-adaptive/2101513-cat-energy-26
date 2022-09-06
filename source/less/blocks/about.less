@@ -4,11 +4,10 @@
 
 .about__wrapper {
   margin: 0 20px;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
 
   @media (min-width: @tablet) {
     margin: 0 30px;
-    margin-bottom: 47px;
     padding-right: 79px;
   }
 
@@ -21,7 +20,7 @@
 
 .about__title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   .heading;
 
@@ -48,7 +47,7 @@
   grid-template-rows: repeat(4, minmax(60px, auto));
   grid-auto-rows: auto;
 
-  gap: 24px;
+  gap: 20px;
 
   @media (min-width: @tablet) {
     grid-template-columns: repeat(2, 1fr);
@@ -70,8 +69,7 @@
   position: relative;
 
   @media (min-width: @tablet) {
-    padding-top: 150px;
-    padding-right: 25px;
+    padding-top: 152px;
 
     max-width: 250px;
   }
@@ -89,7 +87,7 @@
     height: 60px;
 
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
 
     @media (min-width: @tablet) {
@@ -126,6 +124,12 @@
       background: url("../img/about/food--tablet.svg");
     }
   }
+
+  &::after {
+    @media (min-width: @tablet) {
+      right: 22px;
+    }
+  }
 }
 
 .about__item--format {
@@ -133,6 +137,8 @@
     background: url("../img/about/format.svg") no-repeat;
 
     @media (min-width: @tablet) {
+      left: 1px;
+
       background: url("../img/about/format--tablet.svg");
     }
   }
@@ -145,6 +151,10 @@
     @media (min-width: @tablet) {
       background: url("../img/about/meal--tablet.svg");
     }
+
+    @media (min-width: @desktop) {
+      left: 2px;
+    }
   }
 }
 
@@ -153,7 +163,19 @@
     background: url("../img/about/period.svg") no-repeat;
 
     @media (min-width: @tablet) {
+      left: 1px;
+
       background: url("../img/about/period--tablet.svg");
+    }
+
+    @media (min-width: @desktop) {
+      left: 4px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet) {
+      right: -3px;
     }
   }
 }
@@ -165,5 +187,13 @@
 
   @media (min-width: @tablet) {
     padding-left: 0;
+  }
+}
+
+.about__info-break {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: inline-block;
   }
 }

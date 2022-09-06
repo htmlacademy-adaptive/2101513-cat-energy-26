@@ -1,16 +1,22 @@
 .card {
-  padding-top: 19px;
+  padding-top: 20px;
 
   border-top: 1px solid @card-border-color;
 
   @media (min-width: @tablet) {
-    padding: 161px 36px 39px;
+    min-height: 430px;
+    padding: 143px 38px 21px;
 
     border-top: none;
 
     position: relative;
 
     background-color: @secondary-bg-color;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 431px;
+    padding: 143px 39px 21px;
   }
 }
 
@@ -27,7 +33,7 @@
   grid-template-columns: 140px 1fr;
   grid-template-rows: minmax(110px, auto) auto;
 
-  gap: 20px 0;
+  gap: 14px 0;
 
   @media (min-width: 321px) {
     grid-template-columns: 1fr 1fr;
@@ -44,38 +50,95 @@
 }
 
 .card__image-container {
+  width: 100%;
+  height: 100%;
+
   margin: 0;
 
-  align-self: center;
-  justify-self: center;
+  position: relative;
 
   @media (min-width: @tablet) {
     position: absolute;
+
+    width: auto;
+    height: auto;
 
     top: -10%;
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media (min-width: @desktop) {
+    top: -12%;
+  }
+
+  &--position {
+    @media (min-width: @tablet) {
+      top: -18%;
+    }
+
+    @media (min-width: @desktop) {
+      top: -83px;
+    }
+  }
 }
 
-.card__image-container--position {
+.card__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   @media (min-width: @tablet) {
-    top: -17%;
+    position: static;
+    transform: none;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: none;
+  }
+
+  &--l-position {
+    top: 59%;
+  }
+
+  &--l-size {
+    @media (min-width: @tablet) {
+      width: 163px;
+      height: 172px;
+    }
+  }
+
+  &--xl-position {
+    top: 55%;
+  }
+
+  &--xl-size {
+    @media (min-width: @tablet) {
+      width: 168px;
+      height: 206px;
+    }
   }
 }
 
 .card__title {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   .title--s;
+  text-transform: uppercase;
 
   @media (min-width: @tablet) {
+    margin-top: 18px;
     margin-bottom: 21px;
 
     text-align: center;
 
     .title--m--catalog;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 6px;
   }
 }
 
@@ -102,7 +165,7 @@
   @media (min-width: @tablet) {
     display: grid;
 
-    gap: 14px;
+    gap: 7px;
 
     .basic-text-style--ml;
   }
@@ -116,7 +179,7 @@
   @media (min-width: @tablet) {
     border-bottom: 1px solid @additional-border-color;
 
-    padding-bottom: 9px;
+    padding-bottom: 8px;
   }
 }
 

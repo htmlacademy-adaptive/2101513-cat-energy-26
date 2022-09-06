@@ -3,13 +3,35 @@
 
   min-width: 280px;
 
-  @media (min-width: @tablet) {
-    padding-top: 0;
-    padding-bottom: 76px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    display: block;
+
+    width: 4000px;
+    height: 2px;
+
+    position: absolute;
+    top: 39px;
+    left: -50%;
+
+    z-index: -1;
+
+    background-color: @hero-bg-color;
+
+    @media (min-width: @tablet) {
+      top: 22px;
+    }
   }
 
   @media (min-width: @tablet) {
-    padding-bottom: 86px;
+    padding: 0 0 75px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 0 86px;
   }
 }
 
@@ -28,7 +50,7 @@
 .catalog-additional__section-layout {
   display: grid;
 
-  gap: 54px;
+  gap: 35px;
 
   @media (min-width: @tablet) {
     gap: 69px;
@@ -46,7 +68,7 @@
 .catalog-additional__layout {
   display: grid;
 
-  gap: 19px;
+  gap: 18px;
 
   @media (min-width: @tablet) {
     gap: 0;
@@ -55,13 +77,29 @@
 
 .catalog-additional__title {
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
+  padding-left: 30px;
+  margin-left: -30px;
+
+  max-width: 277px;
 
   .title--m;
+  background-color: @default-bg-color;
 
   @media (min-width: @tablet) {
     margin-bottom: 80px;
+    padding-left: 37px;
+    margin-left: 0;
+
+    max-width: 411px;
 
     .subheading--m;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 40px;
+    margin-left: -40px;
+
+    max-width: 413px;
   }
 }

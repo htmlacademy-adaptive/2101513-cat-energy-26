@@ -11,6 +11,14 @@
   align-items: center;
 
   gap: 24px;
+
+  @media (min-width: @tablet) {
+    margin-left: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 30px;
+  }
 }
 
 .contacts-list__link {
@@ -24,6 +32,10 @@
   padding: 20px 0;
 
   color: @footer-text-color;
+
+  @media (min-width: @tablet) {
+    padding: 40px 0;
+  }
 }
 
 .contacts-list__link:hover .contacts-list__icon {
