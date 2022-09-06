@@ -65,8 +65,11 @@
         <p class="promo__subtitle">Занялся собой? Займись котом!</p>
         <a class="promo__button basic-button" href="form.html">Подобрать программу</a>
         <picture>
-          <source media="(min-width: 1280px)" srcset="./img/promo/product--desktop.png 1x, ./img/promo/product--desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="./img/promo/product--tablet.png 1x, ./img/promo/product--tablet@2x.png 2x">
+          <source type="image/webp" media="(min-width: 1280px)" srcset="./img/promo/product--desktop.webp 1x, ./img/promo/product@2x--desktop.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/promo/product--tablet.webp 1x, ./img/promo/product@2x--tablet@.webp 2x">
+          <source type="image/webp" srcset="./img/promo/product.webp 1x, ./img/promo/product@2x.webp 2x">
+          <source media="(min-width: 1280px)" srcset="./img/promo/product--desktop.png 1x, ./img/promo/product@2x--desktop.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/promo/product--tablet.png 1x, ./img/promo/product@2x--tablet.png 2x">
           <img class="promo__product" src="./img/promo/product.png" srcset="./img/promo/product@2x.png 2x" alt="Логотип сайта Кэт-Энерджи." width="280" height="270">
         </picture>
       </div>
@@ -154,12 +157,16 @@
         <div class="widget__slider-container slider">
           <div class="slider__prev">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/prev--tablet.webp 1x, ./img/slider/prev@2x--tablet.webp 2x">
+              <source type="image/webp" srcset="./img/slider/prev.webp 1x, ./img/slider/prev@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/slider/prev--tablet.png 1x, ./img/slider/prev@2x--tablet.png 2x">
               <img class="slider__image slider__prev-image" src="./img/slider/prev.png" srcset="./img/slider/prev@2x.png" alt="Пухлый кот до преображения." width="280" height="256">
             </picture>
           </div>
           <div class="slider__after">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/after--tablet.webp 1x, ./img/slider/after@2x--tablet.webp 2x">
+              <source type="image/webp" srcset="./img/slider/after.webp 1x, ./img/slider/after@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/slider/after--tablet.png 1x, ./img/slider/after@2x--tablet.png 2x">
               <img class="slider__image slider__after-image" src="./img/slider/after.png" srcset="./img/slider/after@2x.png" alt="Стройный кот после преображения." width="280" height="256">
             </picture>
