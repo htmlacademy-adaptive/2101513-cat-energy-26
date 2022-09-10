@@ -218,17 +218,21 @@
 }
 
 .form__program-item-wrapper {
+  padding-left: 45px;
+
   position: relative;
+
+  @media (min-width: @tablet) {
+    padding-left: 68px;
+    .form-text-style;
+  }
 }
 
 .form__program-title {
-  padding-left: 45px;
-
   .secondary-text-style--input;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
-    padding-left: 68px;
     .form-text-style;
   }
 }
@@ -647,20 +651,21 @@
 }
 
 .form__add-item-title {
-  padding-left: 46px;
-
   .secondary-text-style--input-darken;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
     .subtitle--m;
-
-    padding-left: 59px;
   }
 }
 
 .form__add-item-wrapper {
+  padding-left: 46px;
   position: relative;
+
+  @media (min-width: @tablet) {
+    padding-left: 59px;
+  }
 }
 
 .form__add-input:checked + .form__add-controls::before {
