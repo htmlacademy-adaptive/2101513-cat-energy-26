@@ -25,22 +25,19 @@
 
 .partner__address {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     min-width: 565px;
 
     position: absolute;
 
-    top: 87px;
+    top: 95px;
     left: 0;
 
     background-color: @default-bg-color;
-  }
-
-  @media (min-width: @desktop) {
-    top: 95px;
   }
 }
 

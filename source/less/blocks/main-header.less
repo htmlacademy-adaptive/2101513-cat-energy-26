@@ -22,29 +22,38 @@
 
 .main-header__layout {
   @media (min-width: @tablet) {
-    min-height: 76px;
+    min-height: 81px;
+
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 112px;
   }
 }
 
 .main-header__container {
-  margin: 0 20px;
-
   min-height: 65px;
+
+  margin: 0 20px;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
 
   @media (min-width: @tablet) {
     margin: 0;
 
-    min-height: 0;
-    height: 51px;
+    min-width: 173px;
+    min-height: 51px;
 
     align-self: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 203px;
+    min-height: 59px;
   }
 }
 
@@ -53,16 +62,11 @@
 }
 
 .main-header__logo {
-  padding-top: 8px;
+  padding-top: 10px;
   padding-bottom: 13px;
 
   @media (min-width: @tablet) {
-    margin-right: 12px;
     padding: 0;
-  }
-
-  @media (min-width: @desktop) {
-    margin-top: -4px;
   }
 
   &:hover,
@@ -78,7 +82,7 @@
 .main-header__logo-icon {
   @media (min-width: @tablet) {
     width: 60px;
-    height: 49px;
+    height: 51px;
   }
 
   @media (min-width: @desktop) {
@@ -88,16 +92,21 @@
 }
 
 .main-header__brand {
+  align-self: center;
+
   margin-left: -7px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet) {
     margin-left: 0;
-    padding-top: 19px;
-    padding-bottom: 11px;
+    padding-top: 4px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop) {
-    padding-top: 11px;
+    padding-top: 16px;
+    padding-bottom: 10px;
   }
 
   &:hover,
@@ -112,12 +121,14 @@
 
 .main-header__brand-icon {
   @media (min-width: @desktop) {
-    width: 119px;
-    height: 22px;
+    width: 120px;
+    height: 24px;
   }
 }
 
 .main-header__nav-toggle {
+  align-self: center;
+
   min-width: 24px;
   min-height: 18px;
 
