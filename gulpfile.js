@@ -154,7 +154,7 @@ images,
 export default gulp.series(
 clean,
 copy,
-images,
+copyImages,
   gulp.parallel(
     styles,
     html,
