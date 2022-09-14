@@ -19,7 +19,13 @@
 }
 
 .slider__prev-image {
-  object-position: left;
+  @media (max-width: @tablet) {
+    object-position: -10px -5px;
+  }
+
+  @media (min-width: @tablet) {
+    object-position: left;
+  }
 }
 
 .slider__after-image {
