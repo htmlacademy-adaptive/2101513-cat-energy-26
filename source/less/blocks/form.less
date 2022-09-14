@@ -7,15 +7,13 @@
   border-top: 1px solid @secondary-border-color;
 
   @media (min-width: @tablet) {
-    padding: 65px 40px;
-    padding-bottom: 72px;
-    padding-right: 37px;
+    padding: 58px 37px 72px 39px;
 
     border-top: none;
   }
 
   @media (min-width: @desktop) {
-    padding: 78px 0;
+    padding: 70px 0;
     padding-bottom: 82px;
   }
 }
@@ -48,7 +46,7 @@
   .subheading--m;
 
   @media (min-width: @tablet) {
-    margin-bottom: 54px;
+    margin-bottom: 56px;
 
     .extra-heading;
   }
@@ -150,9 +148,7 @@
 }
 
 .form__pet-input {
-  padding: 0 15px;
-  padding-top: 11px;
-  padding-bottom: 8px;
+  padding: 11px 15px 8px;
 
   flex: 1;
 
@@ -162,9 +158,7 @@
   .secondary-text-style--form;
 
   @media (min-width: @tablet) {
-    padding: 0 18px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding: 13px 20px;
   }
 
   &::placeholder {
@@ -240,7 +234,6 @@
 .form__program-input {
   &:checked + .form__program-controls::before {
     background-color: @checkbox-controls-color;
-    transition: 0.6s ease-out;
   }
 
   &:hover + .form__program-controls {
@@ -283,6 +276,7 @@
     transform: translate(-50%, -50%);
 
     background-color: transparent;
+    transition: 0.3s ease-in-out;
     border-radius: 50%;
   }
 
@@ -323,7 +317,11 @@
     background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
-      top: 21px;
+      top: 23px;
+    }
+
+    @media (min-width: @desktop) {
+      top: 22px;
     }
   }
 
@@ -427,6 +425,10 @@
   right: 14px;
   transform: translateY(-50%);
 
+  @media (min-width: @tablet) {
+    right: 16px;
+  }
+
   @media (min-width: @desktop) {
     top: 49%;
     margin-right: 4px;
@@ -444,7 +446,7 @@
   .secondary-text-style--form;
 
   @media (min-width: @tablet) {
-    padding: 12px 45px 14px 20px;
+    padding: 13px 45px 14px 21px;
   }
 
   &::placeholder {
@@ -506,6 +508,10 @@
     @media (min-width: @tablet) {
       top: 21px;
     }
+
+    @media (min-width: @desktop) {
+      top: 22px;
+    }
   }
 }
 
@@ -540,7 +546,7 @@
     padding-left: 39px;
     margin-left: -40px;
 
-    max-width: 259px;
+    max-width: 262px;
 
     .subheading--m;
   }
@@ -596,6 +602,10 @@
     background-color: @hero-bg-color;
 
     @media (min-width: @tablet) {
+      top: 22px;
+    }
+
+    @media (min-width: @desktop) {
       top: 23px;
     }
   }
@@ -670,7 +680,6 @@
 
 .form__add-input:checked + .form__add-controls::before {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
 }
 
 .form__add-input {
@@ -718,6 +727,7 @@
 
     background: url("../../img/form/checked.svg") no-repeat center;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 
   @media (min-width: @tablet) {
