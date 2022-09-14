@@ -68,6 +68,10 @@
 .about__item {
   position: relative;
 
+  &:hover::before {
+    transform: scale(1.1);
+  }
+
   @media (min-width: @tablet) {
     padding-top: 152px;
 
@@ -89,6 +93,8 @@
     position: absolute;
     top: -2px;
     left: 0;
+
+    transition: all 0.3s ease-in-out;
 
     @media (min-width: @tablet) {
       width: 80px;

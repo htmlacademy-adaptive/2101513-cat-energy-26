@@ -17,6 +17,11 @@
     background-color: @basic-button-color--hover;
   }
 
+  &:focus {
+    outline: 3px dashed @hero-bg-color;
+    outline-offset: 3px;
+  }
+
   &:active {
     background-color: @basic-button-color--active;
     color: fade(@default-text-color, 30%);
