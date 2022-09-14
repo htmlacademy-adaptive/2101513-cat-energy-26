@@ -17,6 +17,11 @@
     background-color: @secondary-button-color--hover;
   }
 
+  &:focus {
+    outline: 3px dashed @checkbox-hover-border-color;
+    outline-offset: 3px;
+  }
+
   &:active {
     background-color: @secondary-button-color--active;
     color: fade(@basic-text-color, 30%);

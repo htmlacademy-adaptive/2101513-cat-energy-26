@@ -94,6 +94,42 @@
 
   padding-top: 77px;
 
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: @grey-border-color;
+    position: absolute;
+    top: 39px;
+
+    @media (min-width: @tablet) {
+      width: 60px;
+      top: 81px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: @grey-border-color;
+    position: absolute;
+    top: 39px;
+    transform: rotate(90deg);
+
+    @media (min-width: @tablet) {
+      width: 60px;
+      top: 80px;
+    }
+  }
+
   @media (min-width: @tablet) {
     margin: 0;
     padding: 161px 36px 38px;
