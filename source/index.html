@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Мы - магазин здорового питания для ваших любимцев.">
-  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin anonymous>
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/cat-energy.svg" type="image/svg+xml">
@@ -18,41 +18,41 @@
 
   <!-- Навигация -->
 
-  <header class="main-header main-header__wrapper main-header__layout">
+  <header class="main-header">
+    <div class="main-header__wrapper main-header__layout">
+      <div class="main-header__container main-header__container--nojs">
+        <a class="main-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/main-header/logo--desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/main-header/logo--tablet.svg">
+            <img class="main-header__logo-icon" src="./img/main-header/logo.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
+          </picture>
+        </a>
+        <a class="main-header__brand" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/main-header/brand--tablet.svg">
+            <img class="main-header__brand-icon" src="./img/main-header/brand.svg" alt="Кэт Энерджи." width="101" height="18">
+          </picture>
+        </a>
+        <button class="main-header__nav-toggle main-header__nav-toggle--closed main-header__nav-toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть навигацию.</span>
+        </button>
+      </div>
 
-    <div class="main-header__container main-header__container--nojs">
-      <a class="main-header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1280px)" srcset="./img/main-header/logo--desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/main-header/logo--tablet.svg">
-          <img class="main-header__logo-icon" src="./img/main-header/logo.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
-        </picture>
-      </a>
-      <a class="main-header__brand" href="index.html">
-        <picture>
-          <source media="(min-width: 768px)" srcset="./img/main-header/brand--tablet.svg">
-          <img class="main-header__brand-icon" src="./img/main-header/brand.svg" alt="Кэт Энерджи." width="101" height="18">
-        </picture>
-      </a>
-      <button class="main-header__nav-toggle main-header__nav-toggle--closed main-header__nav-toggle--nojs" type="button">
-        <span class="visually-hidden">Открыть навигацию.</span>
-      </button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current main-nav__link--current-lighten main-nav__link--focus">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--focus" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--focus" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current main-nav__link--current-lighten main-nav__link--focus">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--focus" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--focus" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-
 </header>
 
   <!-- Основная информация -->
@@ -78,59 +78,61 @@
     </section>
 
     <!-- Предложения -->
-    <section class="feature feature__wrapper feature__layout">
-    <h2 class="visually-hidden">Программы питания.</h2>
+    <section class="feature">
+      <div class="feature__wrapper feature__layout">
+        <h2 class="visually-hidden">Программы питания.</h2>
 
-    <section class="feature-card feature-card--slim">
-      <div class="feature-card__container">
-        <h3 class="feature-card__title">Похудение</h3>
-        <p class="feature-card__subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <div class="feature-card__link-container">
-          <a class="feature-card__link" href="catalog.html#slim">Каталог slim
-            <svg class="feature-card__link-icon feature-card__link-icon--position" width="24" height="12" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="./img/sprite/sprite.svg#icon_arrow"></use>
-            </svg>
-          </a>
-        </div>
+        <section class="feature-card feature-card--slim">
+          <div class="feature-card__container">
+            <h3 class="feature-card__title">Похудение</h3>
+            <p class="feature-card__subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <div class="feature-card__link-container">
+              <a class="feature-card__link" href="catalog.html#slim">Каталог slim
+                <svg class="feature-card__link-icon feature-card__link-icon--position" width="24" height="12" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/sprite/sprite.svg#icon_arrow"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-card feature-card--gain">
+          <div class="feature-card__container">
+            <h3 class="feature-card__title">Набор массы</h3>
+            <p class="feature-card__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <div class="feature-card__link-container">
+              <a class="feature-card__link" href="catalog.html#gain">Каталог pro
+                <svg class="feature-card__link-icon" width="24" height="12" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/sprite/sprite.svg#icon_arrow"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <section class="feature-card feature-card--gain">
-      <div class="feature-card__container">
-        <h3 class="feature-card__title">Набор массы</h3>
-        <p class="feature-card__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-        <div class="feature-card__link-container">
-          <a class="feature-card__link" href="catalog.html#gain">Каталог pro
-            <svg class="feature-card__link-icon" width="24" height="12" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="./img/sprite/sprite.svg#icon_arrow"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
     </section>
 
     <!--Как это работает -->
 
-    <section class="about about__wrapper">
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">Как это работает</h2>
 
-      <h2 class="about__title">Как это работает</h2>
-      <ul class="about__list about__layout">
-        <li class="about__item about__item--food">
-          <p class="about__info">Функциональное питание содержит только полезные питательные вещества.</p>
-        </li>
-        <li class="about__item about__item--format">
-          <p class="about__info">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-        </li>
-        <li class="about__item about__item--meal">
-          <p class="about__info">Замените один-два приема обычной еды на наше функциональное питание.</p>
-        </li>
-        <li class="about__item about__item--period">
-          <p class="about__info">Уже через месяц наслаждайтесь изменениями к лучшему<br class="about__info-break"> вашего питомца!</p>
-        </li>
-      </ul>
-
+        <ul class="about__list about__layout">
+          <li class="about__item about__item--food">
+            <p class="about__info">Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="about__item about__item--format">
+            <p class="about__info">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          </li>
+          <li class="about__item about__item--meal">
+            <p class="about__info">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="about__item about__item--period">
+            <p class="about__info">Уже через месяц наслаждайтесь изменениями к лучшему<br class="about__info-break"> вашего питомца!</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Интерактивный пример -->
@@ -226,7 +228,7 @@
         </a>
 
         <h2 class="visually-hidden">Контакты.</h2>
-        <ul class="main-footer__contacts contacts-list contacts-list__layout">
+        <ul class="main-footer__contacts contacts-list">
           <li class="contacts-list__item">
             <a class="contacts-list__link" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer">
               <span class="visually-hidden">Наша страница Вконтакте.</span>
