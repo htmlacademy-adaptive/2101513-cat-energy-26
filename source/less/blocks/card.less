@@ -134,6 +134,18 @@
     outline: 3px dashed @hero-bg-color;
     outline-offset: 3px;
   }
+
+  &--image {
+    width: 100%;
+    height: 100%;
+
+    &:focus {
+      @media (max-width: @tablet) {
+        outline: 3px dashed @hero-bg-color;
+        outline-offset: -5px;
+      }
+    }
+  }
 }
 
 .card__title {
