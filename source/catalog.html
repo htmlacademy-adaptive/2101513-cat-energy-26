@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Мы - магазин здорового питания для ваших любимцев.">
-  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin anonymous>
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/cat-energy.svg" type="image/svg+xml">
@@ -18,41 +18,41 @@
 
   <!-- Навигация -->
 
-  <header class="main-header main-header__wrapper main-header__layout">
+  <header class="main-header">
+    <div class="main-header__wrapper main-header__layout">
+      <div class="main-header__container main-header__container--nojs">
+        <a class="main-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/main-header/logo--desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/main-header/logo--tablet.svg">
+            <img class="main-header__logo-icon" src="./img/main-header/logo.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
+          </picture>
+        </a>
+        <a class="main-header__brand" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/main-header/brand--tablet.svg">
+            <img class="main-header__brand-icon" src="./img/main-header/brand.svg" alt="Кэт Энерджи." width="101" height="18">
+          </picture>
+        </a>
+        <button class="main-header__nav-toggle main-header__nav-toggle--closed main-header__nav-toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть навигацию.</span>
+        </button>
+      </div>
 
-    <div class="main-header__container main-header__container--nojs">
-      <a class="main-header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1280px)" srcset="./img/main-header/logo--desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/main-header/logo--tablet.svg">
-          <img class="main-header__logo-icon" src="./img/main-header/logo.svg" alt="Логотип сайта Кэт-Энерджи." width="33" height="37">
-        </picture>
-      </a>
-      <a class="main-header__brand" href="index.html">
-        <picture>
-          <source media="(min-width: 768px)" srcset="./img/main-header/brand--tablet.svg">
-          <img class="main-header__brand-icon" src="./img/main-header/brand.svg" alt="Кэт Энерджи." width="101" height="18">
-        </picture>
-      </a>
-      <button class="main-header__nav-toggle main-header__nav-toggle--closed main-header__nav-toggle--nojs" type="button">
-        <span class="visually-hidden">Открыть навигацию.</span>
-      </button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--dark" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current main-nav__link--dark">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--dark" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--dark" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current main-nav__link--dark">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--dark" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-
 </header>
 
   <!-- Основная информация -->
@@ -321,7 +321,7 @@
           <div class="catalog__optional-container">
             <b class="catalog__optional-title">Показать еще<br class="catalog__optional-break">&nbsp;100500 товаров</b>
             <p class="catalog__optional-subtitle">На самом деле вкусов<br class="catalog__optional-break">&nbsp;гораздо больше!</p>
-            <button class="catalog__optional-button secondary-button button--bg-grey">Показать все</button>
+            <button class="catalog__optional-button catalog__optional-button--bg-grey secondary-button">Показать все</button>
           </div>
         </section>
 
@@ -331,57 +331,67 @@
 
     <!-- Дополнительные товары -->
 
-    <section class="catalog-additional catalog-additional__wrapper">
-      <h2 class="catalog-additional__title">Дополнительные товары</h2>
+    <section class="catalog-additional">
+      <div class="catalog-additional__wrapper">
+        <h2 class="catalog-additional__title">Дополнительные товары</h2>
 
-      <div class="catalog-additional__section-layout">
+        <div class="catalog-additional__section-layout">
 
-        <div class="catalog-additional__layout">
+          <div class="catalog-additional__layout">
 
-          <article class="card-additional card-additional__layout">
-            <h3 class="card-additional__title">Сахарозаменитель</h3>
-            <dl class="card-additional__info">
-              <dt class="card-additional__term">1 упаковка (100 г)</dt>
-              <dd class="card-additional__def">200 Р.</dd>
-            </dl>
-            <button class="card-additional__button basic-button" type="button">Заказать</button>
-          </article>
+            <article class="card-additional">
+              <div class="card-additional__layout">
+                <h3 class="card-additional__title">Сахарозаменитель</h3>
+                <dl class="card-additional__info">
+                  <dt class="card-additional__term">1 упаковка (100 г)</dt>
+                  <dd class="card-additional__def">200 Р.</dd>
+                </dl>
+                <button class="card-additional__button basic-button" type="button">Заказать</button>
+              </div>
+            </article>
 
-          <article class="card-additional card-additional__layout">
-            <h3 class="card-additional__title">Питьевая вода</h3>
-            <dl class="card-additional__info">
-              <dt class="card-additional__term">5 литров</dt>
-              <dd class="card-additional__def card-additional__def--margin">50 Р.</dd>
-            </dl>
-            <button class="card-additional__button basic-button" type="button">Заказать</button>
-          </article>
+            <article class="card-additional">
+              <div class="card-additional__layout">
+                <h3 class="card-additional__title">Питьевая вода</h3>
+                <dl class="card-additional__info">
+                  <dt class="card-additional__term">5 литров</dt>
+                  <dd class="card-additional__def card-additional__def--margin">50 Р.</dd>
+                </dl>
+                <button class="card-additional__button basic-button" type="button">Заказать</button>
+              </div>
+            </article>
 
-          <article class="card-additional card-additional__layout">
-            <h3 class="card-additional__title">Молоко</h3>
-            <dl class="card-additional__info">
-              <dt class="card-additional__term">1 литр</dt>
-              <dd class="card-additional__def">100 Р.</dd>
-            </dl>
-            <button class="card-additional__button basic-button" type="button">Заказать</button>
-          </article>
+            <article class="card-additional">
+              <div class="card-additional__layout">
+                <h3 class="card-additional__title">Молоко</h3>
+                <dl class="card-additional__info">
+                  <dt class="card-additional__term">1 литр</dt>
+                  <dd class="card-additional__def">100 Р.</dd>
+                </dl>
+                <button class="card-additional__button basic-button" type="button">Заказать</button>
+              </div>
+            </article>
 
-          <article class="card-additional card-additional__layout card-additional--border">
-            <h3 class="card-additional__title">Витамины</h3>
-            <dl class="card-additional__info">
-              <dt class="card-additional__term">1 упаковка (30 г)</dt>
-              <dd class="card-additional__def">300 Р.</dd>
-            </dl>
-            <button class="card-additional__button basic-button" type="button">Заказать</button>
-          </article>
+            <article class="card-additional card-additional--border">
+              <div class="card-additional__layout">
+                <h3 class="card-additional__title">Витамины</h3>
+                <dl class="card-additional__info">
+                  <dt class="card-additional__term">1 упаковка (30 г)</dt>
+                  <dd class="card-additional__def">300 Р.</dd>
+                </dl>
+                <button class="card-additional__button basic-button" type="button">Заказать</button>
+              </div>
+            </article>
+
+          </div>
+
+        <!-- Подарок -->
+
+          <div class="gift">
+            <p class="gift__title">Закажите все<br class="gifr__break"> и получите чехол для<br class="gifr__break"> кота в подарок!</p>
+          </div>
 
         </div>
-
-      <!-- Подарок -->
-
-        <div class="gift">
-          <p class="gift__title">Закажите все<br class="gifr__break"> и получите чехол для<br class="gifr__break"> кота в подарок!</p>
-        </div>
-
       </div>
 
     </section>
@@ -428,7 +438,7 @@
         </a>
 
         <h2 class="visually-hidden">Контакты.</h2>
-        <ul class="main-footer__contacts contacts-list contacts-list__layout">
+        <ul class="main-footer__contacts contacts-list">
           <li class="contacts-list__item">
             <a class="contacts-list__link" href="https://vk.com/htmlacademy" target="_blank" rel="noopener noreferrer">
               <span class="visually-hidden">Наша страница Вконтакте.</span>
