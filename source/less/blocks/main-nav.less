@@ -2,11 +2,10 @@
   width: 100%;
 
   position: absolute;
+  z-index: 3;
 
   top: 64px;
   left: 0;
-
-  z-index: 3;
 
   @media (min-width: @tablet) {
     width: auto;
@@ -44,12 +43,14 @@
     gap: 36px;
     justify-content: space-between;
     flex-flow: row wrap;
+    padding-top: 17px;
 
     max-width: 480px;
   }
 
   @media (min-width: @desktop) {
     gap: 35px;
+    padding-top: 35px;
 
     max-width: 610px;
   }
@@ -87,24 +88,39 @@
   text-transform: uppercase;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 3px dashed @hero-bg-color;
+    outline-offset: -5px;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   @media (min-width: @tablet) {
     padding: 0;
-    padding-top: 42px;
+    padding-top: 25px;
     padding-bottom: 8px;
+
+    &:focus {
+      outline-offset: 3px;
+    }
   }
 
   @media (min-width: @desktop) {
-    padding-top: 70px;
+    padding-top: 35px;
     padding-bottom: 7px;
 
     .header-text-style--desktop;
+  }
+
+  &--focus {
+    &:focus {
+      outline: 3px dashed @default-bg-color;
+    }
   }
 }
 

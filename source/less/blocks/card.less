@@ -18,6 +18,10 @@
     min-height: 431px;
     padding: 143px 39px 21px;
   }
+
+  &:hover .card__image {
+    scale: 1.1;
+  }
 }
 
 .card__wrapper {
@@ -88,6 +92,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: scale 0.3s ease-in;
 
   @media (min-width: @tablet) {
     position: static;
@@ -118,6 +123,16 @@
       width: 168px;
       height: 206px;
     }
+  }
+}
+
+.card__link-descr {
+  text-decoration: none;
+  display: block;
+
+  &:focus {
+    outline: 3px dashed @hero-bg-color;
+    outline-offset: 3px;
   }
 }
 
@@ -187,4 +202,6 @@
   padding: 10px 25px;
 
   grid-column: 1 / -1;
+
+  text-decoration: none;
 }
