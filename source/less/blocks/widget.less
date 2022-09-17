@@ -97,17 +97,17 @@
     max-width: 436px;
     margin-bottom: 69px;
   }
+}
 
-  &-break {
+.widget__subtitle-break {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: inline-block;
+  }
+
+  @media (min-width: @desktop) {
     display: none;
-
-    @media (min-width: @tablet) {
-      display: inline-block;
-    }
-
-    @media (min-width: @desktop) {
-      display: none;
-    }
   }
 }
 
