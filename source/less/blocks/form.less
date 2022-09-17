@@ -1,7 +1,7 @@
 // Форма
 
 .form {
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 31px;
 
   border-top: 1px solid @secondary-border-color;
@@ -9,7 +9,7 @@
   overflow-x: hidden;
 
   @media (min-width: @tablet) {
-    padding: 58px 37px 72px 39px;
+    padding: 59px 37px 72px 39px;
 
     border-top: none;
   }
@@ -60,13 +60,13 @@
 
 .form__subtitle {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   .secondary-text-style;
   text-transform: uppercase;
 
   @media (min-width: @tablet) {
-    margin-bottom: 66px;
+    margin-bottom: 65px;
 
     .subtitle--m;
   }
@@ -78,7 +78,7 @@
 .form__pet-container {
   display: grid;
 
-  gap: 22px 0;
+  gap: 24px 0;
 
   @media (min-width: @tablet) {
     margin-bottom: 75px;
@@ -150,7 +150,7 @@
 }
 
 .form__pet-input {
-  padding: 11px 15px 8px;
+  padding: 11px 15px 13px;
 
   flex: 1;
 
@@ -160,7 +160,7 @@
   .secondary-text-style--form;
 
   @media (min-width: @tablet) {
-    padding: 13px 20px;
+    padding: 16px 20px;
   }
 
   &::placeholder {
@@ -177,6 +177,7 @@
   }
 
   &:focus {
+    outline: none;
     border-color: @input-focus-border-color;
   }
 
@@ -243,7 +244,11 @@
   }
 
   &:focus + .form__program-controls {
-    border-color: @checkbox-hover-border-color;
+    border-color: @input-focus-border-color;
+  }
+
+  &:focus-visible + .form__program-controls {
+    border-color: @input-focus-border-color;
     outline: 3px dashed @checkbox-hover-border-color;
     outline-offset: 5px;
   }
@@ -438,7 +443,7 @@
 }
 
 .form__personal-input {
-  padding: 10px 40px 9px 15px;
+  padding: 10px 40px 15px 15px;
 
   flex: 1;
 
@@ -448,7 +453,7 @@
   .secondary-text-style--form;
 
   @media (min-width: @tablet) {
-    padding: 13px 45px 14px 21px;
+    padding: 18px 45px 14px 21px;
   }
 
   &::placeholder {
@@ -465,6 +470,7 @@
   }
 
   &:focus {
+    outline: none;
     border-color: @input-focus-border-color;
   }
 
@@ -515,7 +521,7 @@
 
 .form__comment-wrapper {
   margin: 0 20px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet) {
     margin: 0;
@@ -687,8 +693,8 @@
     border-color: @checkbox-hover-border-color;
   }
 
-  &:focus + .form__add-controls {
-    border-color: @checkbox-hover-border-color;
+  &:focus-visible + .form__add-controls {
+    border-color: @input-focus-border-color;
     outline: 3px dashed @checkbox-hover-border-color;
     outline-offset: 5px;
   }
@@ -748,11 +754,11 @@
   @media (min-width: @tablet) {
     margin: 0;
 
-    margin-top: 58px;
+    margin-top: 55px;
   }
 
   @media (min-width: @desktop) {
-    margin-top: 65px;
+    margin-top: 63px;
   }
 }
 
