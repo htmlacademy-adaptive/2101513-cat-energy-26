@@ -176,8 +176,6 @@
 
   &:focus {
     border-color: @input-focus-border-color;
-    outline: 3px dashed @checkbox-hover-border-color;
-    outline-offset: 3px;
   }
 
   &--error {
@@ -466,24 +464,18 @@
 
   &:focus {
     border-color: @input-focus-border-color;
-    outline: 3px dashed @checkbox-hover-border-color;
-    outline-offset: 3px;
   }
 
-  &:focus + .form__personal-icon,
-  &:focus + .form__personal-icon > line,
-  &:focus + .form__personal-icon > path {
+  &:focus + .form__personal-icon {
     color: @checkbox-controls-color;
-    stroke: @checkbox-controls-color;
   }
 
-  &--error,
-  &--error + .form__personal-icon,
-  &--error + .form__personal-icon > line,
-  &--error + .form__personal-icon > path {
+  &--error {
     border-color: @input-error-border-color;
+  }
+
+  &--error + .form__personal-icon {
     color: @input-error-border-color;
-    stroke: @input-error-border-color;
   }
 }
 
